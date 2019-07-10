@@ -8,4 +8,39 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!--首页每个功能的图标的样式-->
+    <style name="menuIcon">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--首页每个大功能的文字的样式-->
+    <style name="lableText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:drawableStart">@mipmap/lable</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <!--首页包裹每个功能的layout的样式-->
+    <style name="menuLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:layout_marginTop">1dp</item>
+    </style>
 </resources>
