@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.widget.LinearLayout;
 
 import com.cheng.channel.Channel;
 import com.cheng.channel.ChannelView;
 import com.yks.simpledemo3.R;
+import com.yks.simpledemo3.tools.Info;
 import com.yks.simpledemo3.view.MyActionBar;
 
 import java.util.ArrayList;
@@ -88,16 +90,23 @@ public class ChannelSortActivity extends Activity implements ChannelView.OnChann
 
     @Override
     public void channelItemClick(int position, Channel channel) {
-
+        Log.d("channelsort","channelItemClick");
+        Log.d("channelsort",channel_view.getMyChannel().toString());
+        Log.d("channelsort",channel_view.getOtherChannel().toString());
     }
 
     @Override
     public void channelEditFinish(List<Channel> channelList) {
-
+        Info.playRingtone(mContext,true);
+        Log.d("channelsort","channelEditFinish");
+        Log.d("channelsort",channel_view.getMyChannel().toString());
+        Log.d("channelsort",channel_view.getOtherChannel().toString());
     }
 
     @Override
     public void channelEditStart() {
-
+        Log.d("channelsort","channelEditFinish");
+        Log.d("channelsort",channel_view.getMyChannel().toString());
+        Log.d("channelsort",channel_view.getOtherChannel().toString());
     }
 }

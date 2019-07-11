@@ -24,16 +24,10 @@
             android:text="@string/sort"/>
         <LinearLayout
             style="@style/menuLayout">
-            <!--库存查询-->
+            <!--频道排序1-->
             <TextView
                 android:id="@+id/channel_sort_layout"
                 style="@style/menuIcon"/>
-            <!--&lt;!&ndash;SKU查询&ndash;&gt;-->
-            <!--<TextView-->
-                <!--android:id="@+id/stock_skuinfo_layout"-->
-                <!--style="@style/menuIcon"-->
-                <!--android:text="@string/sku_search"-->
-                <!--android:drawableTop="@mipmap/sku_search"/>-->
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
