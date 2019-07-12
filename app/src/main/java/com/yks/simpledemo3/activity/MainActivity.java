@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private List<Integer> images = new ArrayList<>();
     //跳转集合
-    private final int [] ids = new int[]{R.id.channel_sort_layout};
-    private final int [] icons = new int[]{R.mipmap.channel_sort};
-    private final String [] names = new String[]{"频道排序"};
-    private final Class [] classes = new Class[]{ChannelSortActivity.class};
+    private final int [] ids = new int[]{R.id.channel_sort_layout,R.id.drawable_layout};
+    private final int [] icons = new int[]{R.mipmap.channel_sort,R.mipmap.drawable_layout};
+    private final String [] names = new String[]{"频道排序","Drawable"};
+    private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

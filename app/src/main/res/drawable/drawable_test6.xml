@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--叠加旋转-->
+    <item>
+        <rotate android:fromDegrees="-50" android:pivotX="0" android:pivotY="0">
+            <bitmap android:src="@mipmap/card"/>
+        </rotate>
+    </item>
+    <item>
+        <rotate android:fromDegrees="-30" android:pivotX="0" android:pivotY="0">
+            <bitmap android:src="@mipmap/card"/>
+        </rotate>
+    </item>
+    <item>
+        <rotate android:fromDegrees="-10" android:pivotX="0" android:pivotY="0">
+            <bitmap android:src="@mipmap/card"/>
+        </rotate>
+    </item>
+    <item>
+        <rotate android:fromDegrees="10" android:pivotX="0" android:pivotY="0">
+            <bitmap android:src="@mipmap/card"/>
+        </rotate>
+    </item>
+</layer-list>

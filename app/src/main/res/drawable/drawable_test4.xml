@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--在原图的基础上拉伸-->
+    <item>
+        <bitmap android:src="@mipmap/banner1"/>
+    </item>
+    <item android:left="35dp"
+        android:top="35dp">
+        <bitmap android:src="@mipmap/banner1"/>
+    </item>
+    <item android:left="70dp"
+        android:top="70dp">
+        <bitmap android:src="@mipmap/banner1"/>
+    </item>
+    <item android:left="105dp"
+        android:top="105dp">
+        <bitmap android:src="@mipmap/banner1"/>
+    </item>
+</layer-list>

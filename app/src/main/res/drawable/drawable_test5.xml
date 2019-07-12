@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--在原图的基础上拉伸-->
+    <item>
+        <bitmap android:src="@mipmap/banner1"
+            android:gravity="center"/>
+    </item>
+    <item android:left="50dp"
+        android:top="50dp">
+        <bitmap android:src="@mipmap/banner1"
+            android:gravity="center"/>
+    </item>
+    <item android:left="100dp"
+        android:top="100dp">
+        <bitmap android:src="@mipmap/banner1"
+            android:gravity="center"/>
+    </item>
+    <item android:left="150dp"
+        android:top="150dp">
+        <bitmap android:src="@mipmap/banner1"
+            android:gravity="center"/>
+    </item>
+</layer-list>
