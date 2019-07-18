@@ -12,4 +12,5 @@
     <color name="colorGray2">#8B8B8B</color>
     <color name="colorGray3">#C1C1C1</color>
     <color name="colorLoginBg">#F9E6BB</color>
+    <color name="colorTranslate">#00000000</color>
 </resources>

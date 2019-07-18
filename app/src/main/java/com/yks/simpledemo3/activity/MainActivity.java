@@ -10,6 +10,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -44,10 +46,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private List<Integer> images = new ArrayList<>();
     //跳转集合
-    private final int [] ids = new int[]{R.id.channel_sort_layout,R.id.drawable_layout};
-    private final int [] icons = new int[]{R.mipmap.channel_sort,R.mipmap.drawable_layout};
-    private final String [] names = new String[]{"频道排序","Drawable"};
-    private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class};
+    private final int [] ids = new int[]{R.id.channel_sort_layout,R.id.drawable_layout,R.id.appBarLayout_layout,R.id.safeKeyBoard_layout,
+                                        R.id.message_verification_layout};
+    private final int [] icons = new int[]{R.mipmap.channel_sort,R.mipmap.drawable_layout,R.mipmap.ai_top,R.mipmap.safe_keyboard,
+                                            R.mipmap.message_verification};
+    private final String [] names = new String[]{"频道排序","Drawable","悬浮吸顶","安全键盘",
+                                                "短信验证"};
+    private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
+                                                MessageVerificationActivity.class};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -172,5 +178,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int px2dip( float pxValue) {
         float scale = getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
+    }
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            Info.showToast(mContext,"开发中...",true);
+            Info.playRingtone(mContext,true);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

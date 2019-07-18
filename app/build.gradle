@@ -37,5 +37,6 @@ dependencies {
     //glide图片
     api 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'com.github.chengzhicao:ChannelView:v1.0.8'
-
+    //权限管理
+    api 'com.lovedise:permissiongen:0.0.6'
 }

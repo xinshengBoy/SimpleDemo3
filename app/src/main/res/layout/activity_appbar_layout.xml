@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="50dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@android:color/transparent"
+            android:fitsSystemWindows="true">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/banner2"
+                app:layout_collapseMode="parallax"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/appbar_bg"
+                app:layout_collapseMode="pin"
+                android:fitsSystemWindows="true"/>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/appbar_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                android:padding="10dp"
+                app:title="悬浮吸顶"
+                app:titleTextColor="@color/colorGray3"
+                app:logo="@mipmap/back" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_bars"
+            android:textSize="20sp"
+            android:textColor="@color/colorGray"
+            android:textIsSelectable="true"
+            android:padding="10dp" />
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

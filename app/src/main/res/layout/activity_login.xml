@@ -45,7 +45,7 @@
                 android:layout_weight="1"
                 android:background="@null"
                 android:hint="@string/hint_username"
-                android:textColorHint="@color/colorGray2"
+                android:textColorHint="@color/colorGray3"
                 android:paddingStart="20dp"/>
             <ImageView
                 android:id="@+id/iv_login_clear"
@@ -73,7 +73,7 @@
                 android:layout_height="match_parent"
                 android:background="@null"
                 android:hint="@string/hint_password"
-                android:textColorHint="@color/colorGray2"
+                android:textColorHint="@color/colorGray3"
                 android:paddingStart="20dp"
                 android:inputType="textPassword"/>
         </LinearLayout>

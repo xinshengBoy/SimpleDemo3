@@ -5,7 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET"/><!--网络-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /><!--读取SD卡文件-->
-
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
@@ -30,8 +30,21 @@
             android:label="主页"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activity.ChannelSortActivity" />
-        <activity android:name=".activity.DrawableActivity" />
+        <activity android:name=".activity.ChannelSortActivity"
+            android:label="@string/channel_sort"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DrawableActivity"
+            android:label="drawable属性"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AppBayLayoutActivity"
+            android:label="悬浮吸顶"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SafeKeyBoardActivity"
+            android:label="自定义安全键盘"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MessageVerificationActivity"
+            android:label="短信验证码"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
