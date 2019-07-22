@@ -45,6 +45,9 @@
         <activity android:name=".activity.MessageVerificationActivity"
             android:label="短信验证码"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.XiaomiStepClockActivity"
+            android:label="小米计时器"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

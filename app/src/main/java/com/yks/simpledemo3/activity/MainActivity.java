@@ -47,13 +47,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private List<Integer> images = new ArrayList<>();
     //跳转集合
     private final int [] ids = new int[]{R.id.channel_sort_layout,R.id.drawable_layout,R.id.appBarLayout_layout,R.id.safeKeyBoard_layout,
-                                        R.id.message_verification_layout};
+                                        R.id.message_verification_layout,R.id.xiaomi_stepclock_layout};
     private final int [] icons = new int[]{R.mipmap.channel_sort,R.mipmap.drawable_layout,R.mipmap.ai_top,R.mipmap.safe_keyboard,
-                                            R.mipmap.message_verification};
+                                            R.mipmap.message_verification,R.drawable.ic_clock};
     private final String [] names = new String[]{"频道排序","Drawable","悬浮吸顶","安全键盘",
-                                                "短信验证"};
+                                                "短信验证","小米计时器"};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
-                                                MessageVerificationActivity.class};
+                                                MessageVerificationActivity.class,XiaomiStepClockActivity.class};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
