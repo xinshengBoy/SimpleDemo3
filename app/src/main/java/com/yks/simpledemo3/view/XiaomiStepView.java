@@ -13,9 +13,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * 描述：小米计步器
+ * 描述：小米计数器
  * 作者：zzh
  * time:2019/07/20
+ * 参考：https://github.com/burro630/MiStopwatch/blob/master/app/src/main/java/com/burro/mistopwatch/StopwatchView.java
  */
 public class XiaomiStepView extends View {
 
@@ -30,7 +31,7 @@ public class XiaomiStepView extends View {
     private int innerAngle;//小圈指针角度
     private float thirdLen;//三角形的边长
     private boolean isPause;//是否暂停
-    private float eachLineAngle = 360f / 240f;//两个刻度线质检的角度，1.5度一个刻度，总共240个间隔
+    private float eachLineAngle = 360f / 240f;//两个刻度线之间的角度，1.5度一个刻度，总共240个间隔
     private Timer timer;//计时器
     private String showContent;//显示的总的时间
 
@@ -193,7 +194,7 @@ public class XiaomiStepView extends View {
                     color = Color.argb(255 - ((totalLines / 4 - count) * 3),255,255,255);
                 }else if (mMilliSeconds != 0 && i < totalLines && i >= darkLine){
                     count ++;
-                    color = Color.argb(255 - ((totalLines / 4 - (i - lightLine)) * 3),255,255,255);
+                    color = Color.argb(255 - ((totalLines / 4 - (i - darkLine)) * 3),255,255,255);
                 }else {
                     color = Color.argb(255 - (int)(360f * 3 / (eachLineAngle * 4)),255,255,255);
                 }

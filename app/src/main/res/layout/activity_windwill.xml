@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGray3">
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/layout_header"/>
+    <RelativeLayout
+        android:id="@+id/layout_windwill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorBlue3"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+        <com.yks.simpledemo3.view.WindPath
+            android:id="@+id/view_wind1"
+            android:layout_width="120dp"
+            android:layout_height="120dp" />
+        <com.yks.simpledemo3.view.PillarView
+            android:id="@+id/view_pill1"
+            android:layout_width="120dp"
+            android:layout_height="150dp" />
+        <com.yks.simpledemo3.view.PillarView
+            android:id="@+id/view_pill2"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_alignBottom="@+id/view_pill1"
+            android:layout_toEndOf="@+id/view_wind1"/>
+        <com.yks.simpledemo3.view.WindPath
+            android:id="@+id/view_wind2"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:layout_alignStart="@+id/view_pill2"
+            android:layout_alignTop="@+id/view_pill2"/>
+    </RelativeLayout>
+    <SeekBar
+        android:id="@+id/sb_windwill"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:max="17"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+    <TextView
+        android:id="@+id/txt_windwill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorBlack2"/>
+</LinearLayout>

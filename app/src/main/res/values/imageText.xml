@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--首页每个功能item的自定义（上面图片，下面文字）-->
+    <declare-styleable name="imageText">
+        <attr name="myImageResource" format="integer"/>
+        <attr name="myTextContent" format="integer"/>
+        <attr name="myTextColor" format="integer"/>
+    </declare-styleable>
+</resources>

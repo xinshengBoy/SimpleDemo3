@@ -3,26 +3,31 @@ package com.yks.simpledemo3.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.yks.simpledemo3.R;
 import com.yks.simpledemo3.tools.GlideImageLoader;
 import com.yks.simpledemo3.tools.Info;
+import com.yks.simpledemo3.view.MenuItemView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
+import com.youth.banner.listener.OnBannerListener;
 
 import net.lemonsoft.lemonhello.LemonHello;
 import net.lemonsoft.lemonhello.LemonHelloAction;
@@ -34,7 +39,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private final Context mContext = MainActivity.this;
     private final Activity mActivity = MainActivity.this;
@@ -45,24 +50,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RelativeLayout cache_layout;
 
     private List<Integer> images = new ArrayList<>();
+    private long exitTime = 0;//退出时间
     //跳转集合
     private final int [] ids = new int[]{R.id.channel_sort_layout,R.id.drawable_layout,R.id.appBarLayout_layout,R.id.safeKeyBoard_layout,
-                                        R.id.message_verification_layout,R.id.xiaomi_stepclock_layout};
-    private final int [] icons = new int[]{R.mipmap.channel_sort,R.mipmap.drawable_layout,R.mipmap.ai_top,R.mipmap.safe_keyboard,
-                                            R.mipmap.message_verification,R.drawable.ic_clock};
-    private final String [] names = new String[]{"频道排序","Drawable","悬浮吸顶","安全键盘",
-                                                "短信验证","小米计时器"};
+                                        R.id.message_verification_layout,R.id.xiaomi_stepclock_layout,R.id.dialog_fragment_layout,R.id.windwill_layout,
+                                        R.id.super_button_layout,R.id.water_picture_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
-                                                MessageVerificationActivity.class,XiaomiStepClockActivity.class};
+                                                MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
+                                                SuperButtonActivity.class,WaterPictureActivity.class};
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         initData();
         initView();
     }
-
+    //初始化广告栏的图片资源
     private void initData(){
         images.add(R.mipmap.banner1);
         images.add(R.mipmap.banner2);
@@ -96,7 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         drawer.setDrawerListener(toggle);
-
+        //todo 实现广告栏
         Banner banner_main = findViewById(R.id.banner_main);
         banner_main.setImageLoader(new GlideImageLoader())
                 .setImages(images)
@@ -106,13 +110,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setIndicatorGravity(BannerConfig.CENTER)
                 .start();
 
+        banner_main.setOnBannerListener(new OnBannerListener() {
+            @Override
+            public void OnBannerClick(int position) {
+                Info.showToast(mContext,"大爷您来啦！我是"+(position+1)+"号",true);
+                playClickTip(position+1);
+            }
+        });
+        //todo 处理每个功能的点击事件
         for (int i=0;i<ids.length;i++){
-            TextView layout = findViewById(ids[i]);
-            //https://blog.csdn.net/weixin_30512027/article/details/80858429  设置图标大小的方法
-            Drawable drawable = getResources().getDrawable(icons[i]);
-            drawable.setBounds(0,0,px2dip(150),px2dip(150));
-            layout.setCompoundDrawables(null,drawable,null,null);
-            layout.setText(names[i]);
+            final MenuItemView layout = findViewById(ids[i]);
             final int finalPosition = i;
             layout.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -207,5 +214,61 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * 描述：播放提示声音
+     * 作者：zzh
+     * @param position 位置
+     */
+    private void playClickTip(int position) {
+        try {
+            AssetManager assetManager = mContext.getAssets();
+            AssetFileDescriptor afd;
+            afd = assetManager.openFd(position+".mp3");
+            MediaPlayer player = new MediaPlayer();
+            if (player.isPlaying()){
+                player.reset();
+            }
+            player.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+//            player.setDataSource(afd.getFileDescriptor());
+            player.setLooping(false);//循环播放
+            player.prepare();
+            player.start();
+            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.reset();//播放完成后及时释放资源
+                    mediaPlayer.release();
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
+            if ((System.currentTimeMillis() - exitTime) > 2000){
+                Toast.makeText(mContext,"再按一次退出程序",Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            }else {
+                exit();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    /**
+     * 描述：全部退出，使用广播
+     * 作者：zzh
+     */
+    private void exit() {
+        Intent intent = new Intent("com.yks.simpledemo3.baseActivity");
+        intent.putExtra("closeAll",1);
+        sendBroadcast(intent);
+        MainActivity.this.finish();
     }
 }

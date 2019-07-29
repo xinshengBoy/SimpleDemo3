@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:imageText="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.yks.simpledemo3.activity.MainActivity"
@@ -17,28 +18,37 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             app:indicator_width="8dp"
-            app:indicator_height="8dp"/>
+            app:indicator_height="8dp"
+            app:image_scale_type="fit_xy"/>
         <TextView
             style="@style/lableText"
             android:text="@string/sort"/>
         <LinearLayout
             style="@style/menuLayout">
             <!--频道排序1-->
-            <TextView
+            <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/channel_sort_layout"
-                style="@style/menuIcon"/>
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@mipmap/channel_sort"
+                imageText:myTextContent="@string/channel_sort"/>
             <!--drawable的应用-->
-            <TextView
+            <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/drawable_layout"
-                style="@style/menuIcon"/>
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@mipmap/drawable_layout"
+                imageText:myTextContent="@string/drawable_layout"/>
             <!--AppBarLayout悬浮吸顶-->
-            <TextView
+            <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/appBarLayout_layout"
-                style="@style/menuIcon"/>
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@mipmap/ai_top"
+                imageText:myTextContent="@string/ai_top"/>
             <!--自定义安全键盘-->
-            <TextView
+            <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/safeKeyBoard_layout"
-                style="@style/menuIcon"/>
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@mipmap/safe_keyboard"
+                imageText:myTextContent="@string/safe_keyboard"/>
         </LinearLayout>
         <TextView
             style="@style/lableText"
@@ -46,12 +56,44 @@
         <LinearLayout
             style="@style/menuLayout">
             <!--短信验证-->
-            <TextView
+            <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/message_verification_layout"
-                style="@style/menuIcon"/>
-            <TextView
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@mipmap/message_verification"
+                imageText:myTextContent="@string/message_verification"/>
+            <!--仿小米计时器-->
+            <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/xiaomi_stepclock_layout"
-                style="@style/menuIcon"/>
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_clock"
+                imageText:myTextContent="@string/ic_clock"/>
+            <!--dialog_fragment对话框-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/dialog_fragment_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/dialog_fragment"
+                imageText:myTextContent="@string/dialog_fragment"/>
+            <!--自定义风车-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/windwill_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_windwill"
+                imageText:myTextContent="@string/ic_windwill"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/menuLayout">
+            <!--超级按钮-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/super_button_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_super_button"
+                imageText:myTextContent="@string/ic_super_button"/>
+            <!--水印图片-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/water_picture_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_water_picture"
+                imageText:myTextContent="@string/ic_water_picture"/>
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

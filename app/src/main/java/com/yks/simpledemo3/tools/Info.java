@@ -81,4 +81,14 @@ public class Info {
             e.printStackTrace();
         }
     }
+
+    /**
+     * 描述：显示加载框
+     * 作者：zzh
+     * @param context 上下文
+     * @param text 要提示的内容
+     */
+    public static void showProgress(Context context,String text){
+        LemonBubble.showRoundProgress(context,text);
+    }
 }

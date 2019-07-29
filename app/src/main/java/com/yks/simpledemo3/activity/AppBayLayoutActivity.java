@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.Window;
-import android.widget.LinearLayout;
 
 import com.yks.simpledemo3.R;
-import com.yks.simpledemo3.view.MyActionBar;
 
 /**
  * 描述：悬浮吸顶
@@ -22,8 +20,5 @@ public class AppBayLayoutActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_appbar_layout);
-
-        LinearLayout title_layout = findViewById(R.id.headerLayout);
-        MyActionBar.show(AppBayLayoutActivity.this,title_layout,"悬浮吸顶","",false);
     }
 }

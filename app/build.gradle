@@ -8,7 +8,6 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0.1"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -39,4 +38,6 @@ dependencies {
     implementation 'com.github.chengzhicao:ChannelView:v1.0.8'
     //权限管理
     api 'com.lovedise:permissiongen:0.0.6'
+    //超级按钮
+    implementation 'top.androidman:superbutton:1.1.1'
 }
