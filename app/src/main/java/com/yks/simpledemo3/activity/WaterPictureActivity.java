@@ -116,6 +116,7 @@ public class WaterPictureActivity extends Activity implements View.OnClickListen
             intent.setAction(Intent.ACTION_PICK);
             intent.setType("image/*");
             startActivityForResult(intent, 23332);
+
         }
     }
 

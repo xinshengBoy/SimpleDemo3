@@ -43,4 +43,6 @@
     <string name="ic_windwill">风车</string>
     <string name="ic_super_button">超级按钮</string>
     <string name="ic_water_picture">水印图片</string>
+    <string name="ic_timing_tasks">定时任务</string>
+    <string name="ic_csv_table">CSV</string>
 </resources>

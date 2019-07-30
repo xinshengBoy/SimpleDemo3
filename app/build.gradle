@@ -40,4 +40,6 @@ dependencies {
     api 'com.lovedise:permissiongen:0.0.6'
     //超级按钮
     implementation 'top.androidman:superbutton:1.1.1'
+    //recycleview适配器的封装
+    implementation 'com.hpu:base-adapter:0.0.3'
 }

@@ -62,6 +62,13 @@
         <activity android:name=".activity.WaterPictureActivity"
             android:label="@string/ic_water_picture"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.TimingTaskActivity"
+            android:label="@string/ic_timing_tasks"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ExportCSVActivity"
+            android:label="@string/ic_csv_table"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
     </application>
 
 </manifest>

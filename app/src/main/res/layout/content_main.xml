@@ -94,10 +94,22 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_water_picture"
                 imageText:myTextContent="@string/ic_water_picture"/>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"/>
+            <!--定时任务-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/timing_tasks_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_timing_tasks"
+                imageText:myTextContent="@string/ic_timing_tasks"/>
+            <!--csv文件导出-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/export_csv_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_csv_table"
+                imageText:myTextContent="@string/ic_csv_table"/>
+            <!--<View-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"/>-->
         </LinearLayout>
     </LinearLayout>
 
