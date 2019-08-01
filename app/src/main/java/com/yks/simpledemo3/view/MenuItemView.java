@@ -90,6 +90,7 @@ public class MenuItemView extends LinearLayout {
         }
         //设置权重
         LinearLayout.LayoutParams ivParams = new LayoutParams(LayoutParams.WRAP_CONTENT,0,5.0f);
+        ivParams.topMargin = 5;
         this.ivMenu.setLayoutParams(ivParams);
     }
 

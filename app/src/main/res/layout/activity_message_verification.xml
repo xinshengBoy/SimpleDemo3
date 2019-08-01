@@ -17,4 +17,9 @@
         android:textColorHint="@color/colorGray3"
         android:textColor="@color/colorBlack"
         android:paddingStart="20dp"/>
+    <TextView
+        android:id="@+id/txt_colors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
 </LinearLayout>

@@ -106,10 +106,22 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_csv_table"
                 imageText:myTextContent="@string/ic_csv_table"/>
-            <!--<View-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"/>-->
+        </LinearLayout>
+        <TextView
+            style="@style/lableText"
+            android:text="@string/verification"/>
+        <LinearLayout
+            style="@style/menuLayout">
+            <!--自定义温度计-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/temperature_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_temperature"
+                imageText:myTextContent="@string/ic_temperature"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"/>
         </LinearLayout>
     </LinearLayout>
 

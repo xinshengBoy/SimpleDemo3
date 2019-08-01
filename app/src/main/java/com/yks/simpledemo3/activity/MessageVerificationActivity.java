@@ -11,8 +11,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.telephony.SmsMessage;
+import android.text.Html;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.yks.simpledemo3.R;
@@ -66,6 +68,10 @@ public class MessageVerificationActivity extends Activity {
                 Info.playRingtone(mContext,true);
             }
         });
+        //todo 给文字设置不同的颜色
+        TextView txt_colors = findViewById(R.id.txt_colors);
+        String str = "<font color='#4d8ade'>钟志华</font>回复<font color='#4d8ade'>毛飞</font>：居然不来上班？";
+        txt_colors.setText(Html.fromHtml(str));
     }
 
     private class MyHandler extends Handler{

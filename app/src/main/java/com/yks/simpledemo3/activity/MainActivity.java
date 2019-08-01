@@ -54,10 +54,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     //跳转集合
     private final int [] ids = new int[]{R.id.channel_sort_layout,R.id.drawable_layout,R.id.appBarLayout_layout,R.id.safeKeyBoard_layout,
                                         R.id.message_verification_layout,R.id.xiaomi_stepclock_layout,R.id.dialog_fragment_layout,R.id.windwill_layout,
-                                        R.id.super_button_layout,R.id.water_picture_layout,R.id.timing_tasks_layout,R.id.export_csv_layout};
+                                        R.id.super_button_layout,R.id.water_picture_layout,R.id.timing_tasks_layout,R.id.export_csv_layout,
+                                        R.id.temperature_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
                                                 MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
-                                                SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class};
+                                                SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class,
+                                                TemperatureActivity.class};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -106,7 +108,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 .setImages(images)
                 .isAutoPlay(true)
                 .setBannerAnimation(Transformer.DepthPage)
-                .setDelayTime(2000)
+                .setDelayTime(3000)
                 .setIndicatorGravity(BannerConfig.CENTER)
                 .start();
 
