@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/headerLayout"
+            layout="@layout/layout_header"/>
+        <com.yks.simpledemo3.view.CircleMenuView
+            android:id="@+id/id_menulayout"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal">
+            <RelativeLayout
+                android:id="@+id/id_circle_menu_item_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="104dp"
+                    android:layout_height="104dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/turnplate_center_unlogin"/>
+                <ImageView
+                    android:layout_width="116dp"
+                    android:layout_height="116dp"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/turnplate_mask_unlogin_normal"/>
+            </RelativeLayout>
+        </com.yks.simpledemo3.view.CircleMenuView>
+    </LinearLayout>
+</ScrollView>

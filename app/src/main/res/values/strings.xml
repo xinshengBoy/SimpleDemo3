@@ -46,4 +46,5 @@
     <string name="ic_timing_tasks">定时任务</string>
     <string name="ic_csv_table">CSV</string>
     <string name="ic_temperature">温度计</string>
+    <string name="ic_circle_menu">转盘菜单</string>
 </resources>
