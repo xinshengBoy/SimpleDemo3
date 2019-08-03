@@ -7,4 +7,16 @@
         <attr name="valueColor" format="color" />
         <attr name="valueSize" format="dimension" />
     </declare-styleable>
+    <!--雷达-->
+    <declare-styleable name="RadarView">
+        <attr name="radarCicleColor" format="color"/><!--圆圈和交叉线的颜色-->
+        <attr name="radarCircleNum" format="integer"/><!--圆圈数量-->
+        <attr name="radarSweepColor" format="color"/><!--扫描的颜色-->
+        <attr name="radarRainDropColor" format="color"/><!--水滴的颜色-->
+        <attr name="radarRainDropNum" format="integer"/><!--水滴的数量-->
+        <attr name="radarShowCross" format="boolean"/><!--是否显示交叉线-->
+        <attr name="radarShowRainDrop" format="boolean"/><!--是否显示水滴-->
+        <attr name="radarSpeed" format="float"/><!--扫描的转速，表示几秒转一圈-->
+        <attr name="radarFlicker" format="float"/><!--水滴显示和消失的速度-->
+    </declare-styleable>
 </resources>

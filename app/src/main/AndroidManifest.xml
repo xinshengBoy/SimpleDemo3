@@ -11,9 +11,9 @@
     <application
         android:allowBackup="true"
         android:name=".activity.MyApplication"
-        android:icon="@drawable/ic_icon"
+        android:icon="@drawable/ic_appicon"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_icon"
+        android:roundIcon="@drawable/ic_appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
@@ -69,8 +69,15 @@
             android:label="@string/ic_csv_table"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
-        <activity android:name=".activity.TemperatureActivity" />
-        <activity android:name=".activity.CircleMenuActivity" />
+        <activity android:name=".activity.TemperatureActivity"
+            android:label="@string/ic_temperature"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CircleMenuActivity"
+            android:label="@string/ic_circle_menu"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.RadarViewActivity"
+            android:label="@string/ic_radar"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

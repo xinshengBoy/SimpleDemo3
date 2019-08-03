@@ -124,10 +124,16 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_circle_menu"
                 imageText:myTextContent="@string/ic_circle_menu"/>
+            <!--雷达扫描-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/radar_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_radar"
+                imageText:myTextContent="@string/ic_radar"/>
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2"/>
+                android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>
 
