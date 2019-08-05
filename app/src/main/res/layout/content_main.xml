@@ -130,10 +130,16 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_radar"
                 imageText:myTextContent="@string/ic_radar"/>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
+            <!--跑马灯-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/marquee_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_marquee"
+                imageText:myTextContent="@string/ic_marquee"/>
+            <!--<View-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"/>-->
         </LinearLayout>
     </LinearLayout>
 

@@ -48,4 +48,5 @@
     <string name="ic_temperature">温度计</string>
     <string name="ic_circle_menu">转盘菜单</string>
     <string name="ic_radar">雷达扫描</string>
+    <string name="ic_marquee">跑马灯</string>
 </resources>
