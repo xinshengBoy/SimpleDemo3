@@ -19,4 +19,19 @@
         <attr name="radarSpeed" format="float"/><!--扫描的转速，表示几秒转一圈-->
         <attr name="radarFlicker" format="float"/><!--水滴显示和消失的速度-->
     </declare-styleable>
+    <!--自定义时钟-->
+    <declare-styleable name="CustomClockView">
+        <attr name="ccv_hour_pointer_color" format="color"/><!--时针颜色-->
+        <attr name="ccv_minute_pointer_color" format="color"/><!--分针颜色-->
+        <attr name="ccv_second_pointer_color" format="color"/><!--秒针颜色-->
+        <attr name="ccv_hour_pointer_width" format="dimension"/><!--时针宽度-->
+        <attr name="ccv_minute_pointer_width" format="dimension"/><!--分针宽度-->
+        <attr name="ccv_second_pointer_width" format="dimension"/><!--秒针宽度-->
+        <attr name="ccv_text_size" format="dimension"/><!--表盘文字大小-->
+        <attr name="ccv_padding" format="dimension"/><!--表盘内边距-->
+        <attr name="ccv_pointer_cornor_radius" format="dimension"/><!--指针圆角值-->
+        <attr name="ccv_pointer_end_length" format="dimension"/><!--指针超过中心点的长度,就是针长度超出的那一截-->
+        <attr name="ccv_scale_long_color" format="color"/><!--时刻刻度颜色-->
+        <attr name="ccv_scale_short_color" format="color"/><!--非时刻刻度颜色-->
+    </declare-styleable>
 </resources>

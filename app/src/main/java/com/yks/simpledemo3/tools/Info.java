@@ -10,6 +10,7 @@ import android.media.MediaPlayer;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.TypedValue;
 
 import com.yks.simpledemo3.adapter.BaseRecyclerAdapter;
 
@@ -128,5 +129,16 @@ public class Info {
         //获取屏幕高度，用于监听软键盘的弹起
         int screenHeight = activity.getWindowManager().getDefaultDisplay().getHeight();
         KEY_HEIGHT = screenHeight / 3;
+    }
+
+    /**
+     * 描述：将dp转成px
+     * 作者：zzh
+     * @param context 上下文
+     * @param dp dp的值
+     * @return 返回的px的值
+     */
+    public static int dp2px (Context context,float dp){
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dp,context.getResources().getDisplayMetrics());
     }
 }

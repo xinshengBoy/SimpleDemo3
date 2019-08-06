@@ -7,10 +7,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.SweepGradient;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.View;
 
 import com.yks.simpledemo3.R;
+import com.yks.simpledemo3.tools.Info;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -112,7 +112,7 @@ public class RadarView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         //设置宽高，默认200
-        int defaultSize = dp2px(getContext(),200);
+        int defaultSize = Info.dp2px(getContext(),200);
         setMeasuredDimension(measureValues(widthMeasureSpec,defaultSize,true),measureValues(heightMeasureSpec,defaultSize,false));
     }
 
@@ -234,16 +234,6 @@ public class RadarView extends View {
         //先旋转画布，再绘制扫描的颜色渲染，实现扫描时的旋转效果
         canvas.rotate(-90 + mDegrees,cx,cy);
         canvas.drawCircle(cx,cy,radius,mSweepPaint);
-    }
-    /**
-     * 描述：将dp转成px
-     * 作者：zzh
-     * @param context 上下文
-     * @param dp dp的值
-     * @return 返回的px的值
-     */
-    private int dp2px (Context context,float dp){
-        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dp,context.getResources().getDisplayMetrics());
     }
 
     /**

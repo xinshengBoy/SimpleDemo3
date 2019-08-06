@@ -109,7 +109,7 @@
         </LinearLayout>
         <TextView
             style="@style/lableText"
-            android:text="@string/verification"/>
+            android:text="@string/custom"/>
         <LinearLayout
             style="@style/menuLayout">
             <!--自定义温度计-->
@@ -136,11 +136,21 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_marquee"
                 imageText:myTextContent="@string/ic_marquee"/>
-            <!--<View-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"/>-->
         </LinearLayout>
+        <LinearLayout
+            style="@style/menuLayout">
+            <!--自定义时钟-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/custom_clock_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_custom_clock"
+                imageText:myTextContent="@string/ic_custom_clock"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"/>
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

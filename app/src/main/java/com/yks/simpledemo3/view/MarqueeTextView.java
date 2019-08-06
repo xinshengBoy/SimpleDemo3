@@ -35,7 +35,6 @@ public class MarqueeTextView extends android.support.v7.widget.AppCompatTextView
         setBackgroundColor(Color.BLACK);
         setTextColor(Color.WHITE);
         setTextSize(56);
-        setsc
     }
 
     @Override
