@@ -85,6 +85,8 @@
         <activity android:name=".activity.CustomClockActivity"
             android:label="@string/ic_custom_clock"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ScrollUnLockActivity" />
+        <activity android:name=".activity.XPopActivity" />
     </application>
 
 </manifest>

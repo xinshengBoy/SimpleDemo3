@@ -145,10 +145,22 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_custom_clock"
                 imageText:myTextContent="@string/ic_custom_clock"/>
+            <!--滑动解锁-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/scroll_unlock_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_scroll_unlock"
+                imageText:myTextContent="@string/ic_scroll_unlock"/>
+            <!--XPop-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/xpop_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_xpop"
+                imageText:myTextContent="@string/ic_xpop"/>
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3"/>
+                android:layout_weight="1"/>
         </LinearLayout>
 
     </LinearLayout>

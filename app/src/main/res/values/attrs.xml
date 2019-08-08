@@ -34,4 +34,12 @@
         <attr name="ccv_scale_long_color" format="color"/><!--时刻刻度颜色-->
         <attr name="ccv_scale_short_color" format="color"/><!--非时刻刻度颜色-->
     </declare-styleable>
+    <!--仿ios滑动解锁-->
+    <declare-styleable name="SlideButton">
+        <attr name="slide_button_bg" format="color"/><!--背景颜色-->
+        <attr name="slide_button_circle_color" format="color"/><!--滑动圆圈的颜色-->
+        <attr name="slide_buuton_text_content" format="string"/><!--中间要显示的文字-->
+        <attr name="slide_button_text_color" format="color"/><!--文字的颜色-->
+        <attr name="slide_button_text_size" format="dimension"/><!--文字的大小-->
+    </declare-styleable>
 </resources>

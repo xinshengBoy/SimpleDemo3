@@ -52,4 +52,12 @@
         <item name="android:windowEnterAnimation">@anim/keyboard_anim_start</item>
         <item name="android:windowExitAnimation">@anim/keyboard_anim_dismiss</item>
     </style>
+    <!--xpop的按钮样式定义-->
+    <style name="xpop_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/edit_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
 </resources>

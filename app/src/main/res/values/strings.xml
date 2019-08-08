@@ -51,4 +51,6 @@
     <string name="ic_radar">雷达扫描</string>
     <string name="ic_marquee">跑马灯</string>
     <string name="ic_custom_clock">自定义时钟</string>
+    <string name="ic_scroll_unlock">滑动解锁</string>
+    <string name="ic_xpop">XPop</string>
 </resources>

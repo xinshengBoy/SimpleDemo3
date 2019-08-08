@@ -29,3 +29,6 @@
 -keep class com.youth.banner.** {
     *;
  }
+#xpop的混淆代码
+-dontwarn com.lxj.xpopup.widget.**
+-keep class com.lxj.xpopup.widget.**{*;}
