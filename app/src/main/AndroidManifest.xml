@@ -87,6 +87,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.ScrollUnLockActivity" />
         <activity android:name=".activity.XPopActivity" />
+        <activity android:name=".activity.ScrollCheckActivity" />
     </application>
 
 </manifest>

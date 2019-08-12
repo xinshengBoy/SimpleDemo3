@@ -56,12 +56,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                         R.id.message_verification_layout,R.id.xiaomi_stepclock_layout,R.id.dialog_fragment_layout,R.id.windwill_layout,
                                         R.id.super_button_layout,R.id.water_picture_layout,R.id.timing_tasks_layout,R.id.export_csv_layout,
                                         R.id.temperature_layout,R.id.circle_menu_layout,R.id.radar_layout,R.id.marquee_layout,
-                                        R.id.custom_clock_layout,R.id.scroll_unlock_layout,R.id.xpop_layout};
+                                        R.id.custom_clock_layout,R.id.scroll_unlock_layout,R.id.xpop_layout,R.id.scroll_check_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
                                                 MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
                                                 SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class,
                                                 TemperatureActivity.class,CircleMenuActivity.class, RadarViewActivity.class,MarqueeActivity.class,
-                                                CustomClockActivity.class,ScrollUnLockActivity.class,XPopActivity.class};
+                                                CustomClockActivity.class,ScrollUnLockActivity.class,XPopActivity.class,ScrollCheckActivity.class};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -183,7 +183,36 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
      */
     private String getCurrentTime(){
         Calendar c = Calendar.getInstance();
-        return c.get(Calendar.YEAR)+"年"+(c.get(Calendar.MONTH)+1)+"月"+c.get(Calendar.DAY_OF_MONTH)+"日  星期"+c.get(Calendar.DAY_OF_WEEK)+"  "+c.get(Calendar.HOUR_OF_DAY)+"时"+c.get(Calendar.MINUTE)+"分";
+        int week = c.get(Calendar.DAY_OF_WEEK);
+        //方法一
+        String[] weeks = {"","星期天","星期一","星期二","星期三","星期四","星期五","星期六"};
+        String weekResult = weeks[week];
+        //方法二
+        String weekStr = "";
+        switch (week){
+            case 1:
+                weekStr = "星期日";
+                break;
+            case 2:
+                weekStr = "星期一";
+                break;
+            case 3:
+                weekStr = "星期二";
+                break;
+            case 4:
+                weekStr = "星期三";
+                break;
+            case 5:
+                weekStr = "星期四";
+                break;
+            case 6:
+                weekStr = "星期五";
+                break;
+            case 7:
+                weekStr = "星期六";
+                break;
+        }
+        return c.get(Calendar.YEAR)+"年"+(c.get(Calendar.MONTH)+1)+"月"+c.get(Calendar.DAY_OF_MONTH)+"日  "+weekStr+"  "+c.get(Calendar.HOUR_OF_DAY)+"时"+c.get(Calendar.MINUTE)+"分";
     }
 
     private int px2dip( float pxValue) {

@@ -157,10 +157,16 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_xpop"
                 imageText:myTextContent="@string/ic_xpop"/>
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
+            <!--滑动验证-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/scroll_check_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_scroll_check"
+                imageText:myTextContent="@string/ic_scroll_check"/>
+            <!--<View-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"/>-->
         </LinearLayout>
 
     </LinearLayout>

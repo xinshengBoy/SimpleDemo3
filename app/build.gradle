@@ -52,4 +52,6 @@ dependencies {
     implementation 'com.hpu:base-adapter:0.0.3'
     //组织架构
 //    implementation 'com.github.onlyloveyd:LazyOrgView:v1.0'
+    //滑动验证(就是将一张图片的某块截取出来作为滑子)
+    api 'com.luozm.captcha:captcha:1.1.2'
 }
