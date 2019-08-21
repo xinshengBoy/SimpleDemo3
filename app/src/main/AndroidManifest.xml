@@ -85,9 +85,18 @@
         <activity android:name=".activity.CustomClockActivity"
             android:label="@string/ic_custom_clock"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activity.ScrollUnLockActivity" />
-        <activity android:name=".activity.XPopActivity" />
-        <activity android:name=".activity.ScrollCheckActivity" />
+        <activity android:name=".activity.ScrollUnLockActivity"
+            android:label="@string/ic_scroll_unlock"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.XPopActivity"
+            android:label="@string/ic_xpop"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.ScrollCheckActivity"
+            android:label="@string/ic_scroll_check"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SearchInTimeActivity"
+            android:label="@string/ic_search_intime"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

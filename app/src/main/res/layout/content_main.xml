@@ -163,11 +163,23 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_scroll_check"
                 imageText:myTextContent="@string/ic_scroll_check"/>
-            <!--<View-->
-                <!--android:layout_width="0dp"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:layout_weight="1"/>-->
         </LinearLayout>
+    <TextView
+        style="@style/lableText"
+        android:text="@string/search"/>
+    <LinearLayout
+        style="@style/menuLayout">
+        <!--即时搜索-->
+        <com.yks.simpledemo3.view.MenuItemView
+            android:id="@+id/search_intime_layout"
+            style="@style/menuItemStyle"
+            imageText:myImageResource="@drawable/ic_search_intime"
+            imageText:myTextContent="@string/ic_search_intime"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"/>
+    </LinearLayout>
 
     </LinearLayout>
 

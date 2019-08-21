@@ -32,6 +32,7 @@
     <string name="keyboard_key5">"&#62;"</string>
     <string name="verification">验证</string>
     <string name="custom">自定义</string>
+    <string name="search">搜索</string>
 
     <!--首页-->
     <string name="channel_sort">频道排序</string>
@@ -54,4 +55,5 @@
     <string name="ic_scroll_unlock">滑动解锁</string>
     <string name="ic_xpop">XPop</string>
     <string name="ic_scroll_check">滑动验证</string>
+    <string name="ic_search_intime">及时搜索</string>
 </resources>

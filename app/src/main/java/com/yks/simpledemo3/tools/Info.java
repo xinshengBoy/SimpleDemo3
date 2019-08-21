@@ -7,6 +7,9 @@ import android.content.pm.PackageManager;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -140,5 +143,20 @@ public class Info {
      */
     public static int dp2px (Context context,float dp){
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,dp,context.getResources().getDisplayMetrics());
+    }
+
+    /**
+     * 描述：发handler消息
+     * 作者：zzh
+     * @param id 需要进入到的handler
+     * @param msg 传递的消息
+     */
+    public static void sendMessage(Handler handler, int id, String msg) {
+        Bundle bundle = new Bundle();
+        bundle.putString("msg",msg);
+        Message message = new Message();
+        message.what = id;
+        message.setData(bundle);
+        handler.sendMessage(message);
     }
 }
