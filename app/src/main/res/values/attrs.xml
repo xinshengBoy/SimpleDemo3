@@ -42,4 +42,15 @@
         <attr name="slide_button_text_color" format="color"/><!--文字的颜色-->
         <attr name="slide_button_text_size" format="dimension"/><!--文字的大小-->
     </declare-styleable>
+    <!--数字雨-->
+    <declare-styleable name="NumberRainItem">
+        <attr name="normalColor" format="color"/><!--默认颜色-->
+        <attr name="highColor" format="color"/><!--高亮颜色-->
+        <attr name="textSize" format="dimension"/><!--文字大小-->
+    </declare-styleable>
+    <declare-styleable name="NumberRainView">
+        <attr name="rainTextSize" format="dimension"/>
+        <attr name="rainHighLightColor" format="color"/>
+        <attr name="rainNormalColor" format="color"/>
+    </declare-styleable>
 </resources>

@@ -97,6 +97,7 @@
         <activity android:name=".activity.SearchInTimeActivity"
             android:label="@string/ic_search_intime"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.NumberRainActivity" />
     </application>
 
 </manifest>

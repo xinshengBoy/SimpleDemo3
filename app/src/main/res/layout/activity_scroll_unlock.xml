@@ -86,4 +86,15 @@
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"/>
     </RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="print"
+        android:textColor="@color/colorWhite"
+        android:onClick="zipFile"
+        android:background="@drawable/btn_login_bg"
+        android:layout_margin="5dp"/>
+    <com.yks.simpledemo3.view.StockView
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
 </LinearLayout>
