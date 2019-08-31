@@ -181,10 +181,16 @@
             style="@style/menuItemStyle"
             imageText:myImageResource="@drawable/ic_number_rain"
             imageText:myTextContent="@string/ic_number_rain"/>
+        <!--数字雨-->
+        <com.yks.simpledemo3.view.MenuItemView
+            android:id="@+id/run_number_layout"
+            style="@style/menuItemStyle"
+            imageText:myImageResource="@drawable/ic_run_number"
+            imageText:myTextContent="@string/ic_run_number"/>
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"/>
+            android:layout_weight="1"/>
     </LinearLayout>
 
     </LinearLayout>

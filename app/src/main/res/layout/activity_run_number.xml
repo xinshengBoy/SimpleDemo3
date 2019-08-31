@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/layout_header"/>
+    <com.yks.simpledemo3.view.RunNumberView
+        android:id="@+id/view_runnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/colorDeepRed"
+        android:textSize="30sp"
+        android:padding="10dp"/>
+    <com.robinhood.ticker.TickerView
+        android:id="@+id/view_ticker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:text="25415"
+        android:padding="10dp"
+        android:background="@drawable/btn_login_bg"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/btn_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更换"
+        android:textSize="18sp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/btn_login_bg"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>

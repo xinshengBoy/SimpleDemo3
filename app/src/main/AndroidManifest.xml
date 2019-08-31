@@ -98,6 +98,7 @@
             android:label="@string/ic_search_intime"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.NumberRainActivity" />
+        <activity android:name=".activity.RunNumberActivity" />
     </application>
 
 </manifest>
