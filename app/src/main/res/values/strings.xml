@@ -58,4 +58,6 @@
     <string name="ic_search_intime">及时搜索</string>
     <string name="ic_number_rain">数字雨</string>
     <string name="ic_run_number">数字滚动</string>
+    <string name="ic_bottom_sheet">底部弹出</string>
+    <string name="ic_compass_clock">罗盘时钟</string>
 </resources>

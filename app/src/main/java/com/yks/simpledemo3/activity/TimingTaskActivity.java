@@ -27,6 +27,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import okhttp3.Call;
+import okhttp3.MediaType;
 
 /**
  * 描述：定时任务调用接口获取数据显示
@@ -157,8 +158,10 @@ public class TimingTaskActivity extends Activity {
         if (mList != null && mList.size() != 0) {
             mList.clear();
         }
-        OkHttpUtils.get().url("http://hq.sinajs.cn/list=sh000001")
+        OkHttpUtils.postString().url("http://hq.sinajs.cn/list=sh000001")
+                .content("abs")
                 .addHeader("Content-Type","application/json")
+                .mediaType(MediaType.parse("application/json"))
                 .tag(this)
                 .build()
                 .connTimeOut(10000L)

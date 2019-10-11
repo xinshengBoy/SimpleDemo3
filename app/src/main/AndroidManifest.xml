@@ -97,8 +97,16 @@
         <activity android:name=".activity.SearchInTimeActivity"
             android:label="@string/ic_search_intime"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activity.NumberRainActivity" />
-        <activity android:name=".activity.RunNumberActivity" />
+        <activity android:name=".activity.NumberRainActivity"
+            android:label="@string/ic_number_rain"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.RunNumberActivity"
+            android:label="@string/ic_run_number"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.BottomSheetActivity"
+            android:label="@string/ic_bottom_sheet"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CompassClockActivity" />
     </application>
 
 </manifest>

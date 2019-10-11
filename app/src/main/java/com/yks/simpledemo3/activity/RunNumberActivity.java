@@ -37,7 +37,7 @@ public class RunNumberActivity extends Activity {
         MyActionBar.show(mActivity,title_layout,"数字滚动","",false);
         //https://www.jianshu.com/p/3513cdd8f320
         view_runnumber = findViewById(R.id.view_runnumber);
-        view_runnumber.setMoney(567.89f);
+        view_runnumber.setMoney(567.89f,1500);
         //https://github.com/robinhood/ticker
         view_ticker = findViewById(R.id.view_ticker);
         view_ticker.setCharacterLists(TickerUtils.provideNumberList());
@@ -50,7 +50,7 @@ public class RunNumberActivity extends Activity {
             public void onClick(View v) {
                 Random random = new Random();
                 float value = random.nextFloat() * 10000;
-                view_runnumber.setMoney(value);
+                view_runnumber.setMoney(value,1500);
                 view_ticker.setCharacterLists(TickerUtils.provideNumberList());
                 view_ticker.setText(value+"");
                 view_ticker.setAnimationDuration(1500);

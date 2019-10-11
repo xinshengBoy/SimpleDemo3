@@ -36,11 +36,13 @@ public class ScrollCheckActivity extends Activity {
         view_captcha1.setCaptchaListener(new Captcha.CaptchaListener() {
             @Override
             public String onAccess(long time) {
+                view_captcha1.reset(true);
                 return "验证成功，花费："+(time/1000d)+"秒";
             }
 
             @Override
             public String onFailed(int failCount) {
+                view_captcha1.reset(true);
                 return "验证失败，还剩："+(view_captcha1.getMaxFailedCount()-failCount)+"次！";
             }
 

@@ -57,13 +57,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                         R.id.super_button_layout,R.id.water_picture_layout,R.id.timing_tasks_layout,R.id.export_csv_layout,
                                         R.id.temperature_layout,R.id.circle_menu_layout,R.id.radar_layout,R.id.marquee_layout,
                                         R.id.custom_clock_layout,R.id.scroll_unlock_layout,R.id.xpop_layout,R.id.scroll_check_layout,
-                                        R.id.search_intime_layout,R.id.number_rain_layout,R.id.run_number_layout};
+                                        R.id.search_intime_layout,R.id.number_rain_layout,R.id.run_number_layout,R.id.bottom_sheet_layout,
+                                        R.id.compass_clock_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
                                                 MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
                                                 SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class,
                                                 TemperatureActivity.class,CircleMenuActivity.class, RadarViewActivity.class,MarqueeActivity.class,
                                                 CustomClockActivity.class,ScrollUnLockActivity.class,XPopActivity.class,ScrollCheckActivity.class,
-                                                SearchInTimeActivity.class,NumberRainActivity.class,RunNumberActivity.class};
+                                                SearchInTimeActivity.class,NumberRainActivity.class,RunNumberActivity.class,BottomSheetActivity.class,
+                                                CompassClockActivity.class};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

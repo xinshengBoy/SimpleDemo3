@@ -54,4 +54,10 @@ public class NumberRainActivity extends Activity {
             Toast.makeText(NumberRainActivity.this,initView(),Toast.LENGTH_SHORT).show();
         }
     };
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeCallbacksAndMessages(null);
+    }
 }
