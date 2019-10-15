@@ -106,7 +106,12 @@
         <activity android:name=".activity.BottomSheetActivity"
             android:label="@string/ic_bottom_sheet"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activity.CompassClockActivity" />
+        <activity android:name=".activity.CompassClockActivity"
+            android:label="@string/ic_compass_clock"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CustomRulerActivity"
+            android:label="@string/ic_custom_ruler"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

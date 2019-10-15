@@ -60,4 +60,5 @@
     <string name="ic_run_number">数字滚动</string>
     <string name="ic_bottom_sheet">底部弹出</string>
     <string name="ic_compass_clock">罗盘时钟</string>
+    <string name="ic_custom_ruler">自定义直尺</string>
 </resources>
