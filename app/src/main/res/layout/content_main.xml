@@ -214,24 +214,52 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_custom_ruler"
                 imageText:myTextContent="@string/ic_custom_ruler"/>
-            <!--&lt;!&ndash;数字雨&ndash;&gt;-->
-            <!--<com.yks.simpledemo3.view.MenuItemView-->
-            <!--android:id="@+id/run_number_layout"-->
-            <!--style="@style/menuItemStyle"-->
-            <!--imageText:myImageResource="@drawable/ic_run_number"-->
-            <!--imageText:myTextContent="@string/ic_run_number"/>-->
-            <!--&lt;!&ndash;数字雨&ndash;&gt;-->
-            <!--<com.yks.simpledemo3.view.MenuItemView-->
-            <!--android:id="@+id/bottom_sheet_layout"-->
-            <!--style="@style/menuItemStyle"-->
-            <!--imageText:myImageResource="@drawable/ic_bottom_sheet"-->
-            <!--imageText:myTextContent="@string/ic_bottom_sheet"/>-->
+            <!--城市定位-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/city_location_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_city_location"
+                imageText:myTextContent="@string/ic_city_location"/>
+            <!--蓝牙-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/bluetooth_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_bluetooth"
+                imageText:myTextContent="@string/ic_bluetooth"/>
+        </LinearLayout>
+        <TextView
+            style="@style/lableText"
+            android:text="@string/music" />
+        <LinearLayout style="@style/menuLayout">
+            <!--即时搜索-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/music_lrc_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_music_lrc"
+                imageText:myTextContent="@string/ic_music_lrc" />
+<!--            &lt;!&ndash;数字雨&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/number_rain_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_number_rain"-->
+<!--                imageText:myTextContent="@string/ic_number_rain" />-->
+<!--            &lt;!&ndash;数字雨&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/run_number_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_run_number"-->
+<!--                imageText:myTextContent="@string/ic_run_number" />-->
+<!--            &lt;!&ndash;数字雨&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/bottom_sheet_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_bottom_sheet"-->
+<!--                imageText:myTextContent="@string/ic_bottom_sheet" />-->
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2" />
+                android:layout_weight="3" />
         </LinearLayout>
-
     </LinearLayout>
 
 </ScrollView>

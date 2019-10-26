@@ -2,6 +2,7 @@ package com.yks.simpledemo3.activity;
 
 import android.app.Application;
 
+import com.yks.simpledemo3.tools.CrashHandler;
 import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.util.concurrent.ExecutorService;
@@ -28,6 +29,9 @@ public class MyApplication extends Application {
         OkHttpUtils.initClient(client);
         //TODO 线程相关文章：https://www.cnblogs.com/1925yiyi/p/9040633.html
         cachedThreadPool = Executors.newCachedThreadPool();
+        //todo 初始化crash闪退日志监听
+        CrashHandler crashHandler = CrashHandler.getInstance();
+        crashHandler.init(this);
     }
 
     @Override

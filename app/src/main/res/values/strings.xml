@@ -33,6 +33,7 @@
     <string name="verification">验证</string>
     <string name="custom">自定义</string>
     <string name="search">搜索</string>
+    <string name="music">音乐</string>
 
     <!--首页-->
     <string name="channel_sort">频道排序</string>
@@ -61,4 +62,7 @@
     <string name="ic_bottom_sheet">底部弹出</string>
     <string name="ic_compass_clock">罗盘时钟</string>
     <string name="ic_custom_ruler">自定义直尺</string>
+    <string name="ic_city_location">城市定位</string>
+    <string name="ic_bluetooth">蓝牙</string>
+    <string name="ic_music_lrc">歌词同步</string>
 </resources>

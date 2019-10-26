@@ -75,4 +75,12 @@
 
         <attr name="rulerbackgroundColor" format="color" />
     </declare-styleable>
+    <declare-styleable name="LrcView">
+        <attr name="lrcColr" format="color|reference"/>
+        <attr name="lrcLineColor" format="color|reference"/>
+        <attr name="lrcMode" format="enum">
+            <enum name="NONE" value="0"/>
+            <enum name="KARAOKE" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>

@@ -6,8 +6,19 @@
     <uses-permission android:name="android.permission.INTERNET"/><!--网络-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /><!--读取SD卡文件-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/><!--写入文件-->
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/><!--接收短信-->
+    <uses-permission android:name="android.permission.VIBRATE" /><!--震动-->
+    <!--GPS定位权限和获取粗略位置的权限-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" /><!--蓝牙-->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-feature android:name="android.hardware.location.gps"/>
+    <uses-feature android:name="android.hardwarebluetooth_le"
+        android:required="true"/>
+
     <application
         android:allowBackup="true"
         android:name=".activity.MyApplication"
@@ -112,6 +123,14 @@
         <activity android:name=".activity.CustomRulerActivity"
             android:label="@string/ic_custom_ruler"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.CityLocationActivity"
+            android:label="@string/ic_city_location"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.BluetoothActivity"
+            android:label="@string/ic_bluetooth"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.BluetoothReceivedFileListActivity" />
+        <activity android:name=".activity.MusicLrcActivity" />
     </application>
 
 </manifest>

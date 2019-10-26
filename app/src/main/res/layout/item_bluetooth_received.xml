@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/txt_item_bluetooth_received_filename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="background"
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack2"/>
+    <TextView
+        android:id="@+id/txt_item_bluetooth_received_filesize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGray2"
+        android:textSize="16sp"
+        android:text="27.35kb"
+        android:layout_below="@+id/txt_item_bluetooth_received_filename"/>
+    <TextView
+        android:id="@+id/txt_item_bluetooth_received_filetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:textColor="@color/colorGray2"
+        android:textSize="16sp"
+        android:text="2019-10-25 11:30:31"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

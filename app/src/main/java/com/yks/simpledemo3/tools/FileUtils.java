@@ -7,10 +7,14 @@ import android.graphics.Rect;
 import android.os.Environment;
 import android.os.StatFs;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.text.DecimalFormat;
 
 /**
@@ -73,6 +77,125 @@ public class FileUtils {
         long size = (avaibleBlocks * statFs.getBlockSize()) / (1024*1024);
         String result = new DecimalFormat("#.00").format(size);
         return result + "MB";
+    }
+
+    /**
+     * 描述：获取指定文件大小
+     * @param file 文件体
+     * @return
+     * @throws Exception
+     */
+    public static long getFileSize(File file) throws Exception{
+        long size =0;
+        if(file.exists()){
+            FileInputStream fis =null;
+            fis = new FileInputStream(file);
+            size = fis.available();
+        }else{
+            file.createNewFile();
+            Log.e("获取文件大小","文件不存在!");
+        }
+        return size;
+    }
+
+    /**
+     * 描述：获取指定文件大小及单位
+     * @param file 文件体
+     * @return
+     * @throws Exception
+     */
+    public static String getFileSizeAndUnit(File file){
+        long size =0;
+        if(file.exists()){
+            FileInputStream fis;
+            try {
+                fis = new FileInputStream(file);
+                size = fis.available();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else{
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Log.e("获取文件大小","文件不存在!");
+        }
+        return FormetFileSize(size);
+    }
+
+    /**
+     * 描述：转换文件大小
+     * @param fileS 文件的size
+     * @return 文件的大小
+     */
+    public static String FormetFileSize(long fileS) {
+        DecimalFormat df  = new DecimalFormat("#.00");
+        String fileSizeString ="";
+        String wrongSize="0B";
+        if(fileS == 0){
+            return wrongSize;
+        }
+        if(fileS < 1024){
+            fileSizeString = df.format((double) fileS) +"B";
+        }else if(fileS < (1024*1024)){
+            fileSizeString = df.format((double) fileS /1024) +"KB";
+        }else if(fileS < (1024*1024*1024)){
+            fileSizeString = df.format((double) fileS /1048576) +"MB";
+        }else{
+            fileSizeString = df.format((double) fileS /1073741824) +"GB";
+        }
+        return fileSizeString;
+    }
+
+    /**
+     * 删除单个文件
+     * @param   filePath    被删除文件的文件名
+     * @return 文件删除成功返回true，否则返回false
+     */
+    public static boolean deleteFile(String filePath) {
+        File file = new File(filePath);
+        if (file.isFile() && file.exists()) {
+            return file.delete();
+        }
+        return false;
+    }
+
+    /**
+     * 删除文件夹以及目录下的文件
+     * @param   filePath 被删除目录的文件路径
+     * @return  目录删除成功返回true，否则返回false
+     */
+    public static boolean deleteDirectory(String filePath) {
+        boolean flag = false;
+        //如果filePath不以文件分隔符结尾，自动添加文件分隔符
+        if (!filePath.endsWith(File.separator)) {
+            filePath = filePath + File.separator;
+        }
+        File dirFile = new File(filePath);
+        if (!dirFile.exists() || !dirFile.isDirectory()) {
+            return false;
+        }
+        flag = true;
+        File[] files = dirFile.listFiles();
+        //遍历删除文件夹下的所有文件(包括子目录)
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].isFile()) {
+                //删除子文件
+                flag = deleteFile(files[i].getAbsolutePath());
+                if (!flag) break;
+            } else {
+                //删除子目录
+                flag = deleteDirectory(files[i].getAbsolutePath());
+                if (!flag) break;
+            }
+        }
+        if (!flag) return false;
+        //删除当前空目录
+        return dirFile.delete();
     }
 
     /**

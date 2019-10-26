@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,9 @@ import com.yks.simpledemo3.tools.ACache;
 import com.yks.simpledemo3.tools.Info;
 
 import net.lemonsoft.lemonbubble.LemonBubble;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * 描述：登录页面
@@ -62,6 +66,15 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
         iv_login_clear.setOnClickListener(this);
         btn_login.setOnClickListener(this);
+        JSONObject object = acache.getAsJSONObject(Info.PDA_LOG);
+        if (object != null){
+            try {
+                String a = object.getString("operator")+"\n"+object.getString("personName")+"\n"+object.getString("error");
+                Log.d("myPdaLog",a);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override

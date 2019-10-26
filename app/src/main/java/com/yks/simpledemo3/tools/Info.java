@@ -20,8 +20,8 @@ import com.yks.simpledemo3.adapter.BaseRecyclerAdapter;
 import net.lemonsoft.lemonbubble.LemonBubble;
 
 /**
- * 描述：
- * 作者：
+ * 描述：存储全局的变量和公共方法等
+ * 作者：zzh
  * time:2019/07/09
  */
 public class Info {
@@ -30,6 +30,7 @@ public class Info {
     public static String PERSONNAME = "";
     //获取屏幕高度，用于监听键盘弹起
     public static int KEY_HEIGHT = 0;
+    public static String PDA_LOG = "MY_PDA_LOG";
     /**
      * 获取当前应用的版本名称
      * @param context 上下文
