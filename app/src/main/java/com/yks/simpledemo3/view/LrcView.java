@@ -88,6 +88,12 @@ public class LrcView extends View {
         postInvalidateDelayed(100);
     }
 
+    /**
+     * 描述：绘制歌词
+     * 作者：zzh
+     * @param canvas 画布
+     * @param currentMills 当前毫秒
+     */
     private void drawLrc2(Canvas canvas,int currentMills){
         if (mode == 0){//默认模式
             for (int i=0;i<list.size();i++){

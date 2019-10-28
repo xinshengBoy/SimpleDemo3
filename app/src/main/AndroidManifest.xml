@@ -129,8 +129,12 @@
         <activity android:name=".activity.BluetoothActivity"
             android:label="@string/ic_bluetooth"
             android:screenOrientation="portrait"/>
-        <activity android:name=".activity.BluetoothReceivedFileListActivity" />
-        <activity android:name=".activity.MusicLrcActivity" />
+        <activity android:name=".activity.BluetoothReceivedFileListActivity"
+            android:label="已接收文件列表"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MusicLrcActivity"
+            android:label="@string/ic_music_lrc"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

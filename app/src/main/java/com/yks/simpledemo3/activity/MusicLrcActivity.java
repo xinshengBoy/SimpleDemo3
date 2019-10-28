@@ -1,7 +1,6 @@
 package com.yks.simpledemo3.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.MediaPlayer;
@@ -27,7 +26,6 @@ import java.io.InputStreamReader;
 public class MusicLrcActivity extends Activity {
 
     private Activity mActivity = MusicLrcActivity.this;
-    private Context mContext = MusicLrcActivity.this;
 
     private LrcView view_music_lrc;
     private MediaPlayer player;
@@ -44,6 +42,7 @@ public class MusicLrcActivity extends Activity {
         MyActionBar.show(mActivity, title_layout, "歌词同步", "", false);
 
         view_music_lrc = findViewById(R.id.view_music_lrc);
+        //todo 开启线程读取lrc的文件
         new ReadLrcTask().execute();
 
     }
@@ -52,6 +51,7 @@ public class MusicLrcActivity extends Activity {
 
         @Override
         protected String doInBackground(Void... voids) {
+            //todo 读取lrc文件
             AssetManager manager = getResources().getAssets();
             try {
                 InputStream inputStream = manager.open("xiaopingguo.lrc");
@@ -76,6 +76,7 @@ public class MusicLrcActivity extends Activity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             try {
+                //todo 同步播放此歌曲
                 AssetFileDescriptor fd = getAssets().openFd("xiaopingguo.mp3");
                 player = new MediaPlayer();
                 player.setDataSource(fd.getFileDescriptor(),fd.getStartOffset(),fd.getLength());
