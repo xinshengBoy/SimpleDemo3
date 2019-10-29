@@ -65,4 +65,5 @@
     <string name="ic_city_location">城市定位</string>
     <string name="ic_bluetooth">蓝牙</string>
     <string name="ic_music_lrc">歌词同步</string>
+    <string name="ic_movie_seat">电影选座</string>
 </resources>

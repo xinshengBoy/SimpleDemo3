@@ -135,6 +135,9 @@
         <activity android:name=".activity.MusicLrcActivity"
             android:label="@string/ic_music_lrc"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MovieSeatActivity"
+            android:label="@string/ic_movie_seat"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

@@ -48,12 +48,13 @@
         <attr name="highColor" format="color"/><!--高亮颜色-->
         <attr name="textSize" format="dimension"/><!--文字大小-->
     </declare-styleable>
+    <!--数字雨-->
     <declare-styleable name="NumberRainView">
         <attr name="rainTextSize" format="dimension"/>
         <attr name="rainHighLightColor" format="color"/>
         <attr name="rainNormalColor" format="color"/>
     </declare-styleable>
-
+    <!--直尺-->
     <declare-styleable name="RulerView">
         <attr name="unit" format="enum">
             <enum name="inch" value="0"/>
@@ -75,6 +76,7 @@
 
         <attr name="rulerbackgroundColor" format="color" />
     </declare-styleable>
+    <!--歌词同步-->
     <declare-styleable name="LrcView">
         <attr name="lrcColr" format="color|reference"/>
         <attr name="lrcLineColor" format="color|reference"/>
@@ -82,5 +84,14 @@
             <enum name="NONE" value="0"/>
             <enum name="KARAOKE" value="1"/>
         </attr>
+    </declare-styleable>
+    <!--电影选座-->
+    <declare-styleable name="MovieSeatView">
+        <attr name="seat_checked" format="reference"/><!--已选图片-->
+        <attr name="seat_sold" format="reference"/><!--已售图片-->
+        <attr name="seat_available" format="reference"/><!--可选图片-->
+        <attr name="overview_checked" format="color"/><!--已选区域颜色-->
+        <attr name="overview_sold" format="color"/><!--已售区域颜色-->
+        <attr name="txt_color" format="color"/>
     </declare-styleable>
 </resources>
