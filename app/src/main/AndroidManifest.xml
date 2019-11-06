@@ -138,6 +138,12 @@
         <activity android:name=".activity.MovieSeatActivity"
             android:label="@string/ic_movie_seat"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.TimePickerActivity"
+            android:label="@string/ic_time_picker"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.AutoMarqueeActivity"
+            android:label="@string/ic_auto_marquee"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

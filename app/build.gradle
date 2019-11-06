@@ -56,4 +56,6 @@ dependencies {
     api 'com.luozm.captcha:captcha:1.1.2'
     //仿支付宝余额的滚动
     api 'com.robinhood.ticker:ticker:2.0.2'
+    //时间选择器
+    api 'com.contrarywind:Android-PickerView:4.1.9'
 }

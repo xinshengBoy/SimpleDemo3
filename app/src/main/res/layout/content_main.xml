@@ -243,22 +243,22 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_movie_seat"
                 imageText:myTextContent="@string/ic_movie_seat" />
-<!--            &lt;!&ndash;数字雨&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/run_number_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_run_number"-->
-<!--                imageText:myTextContent="@string/ic_run_number" />-->
-<!--            &lt;!&ndash;数字雨&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/bottom_sheet_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_bottom_sheet"-->
-<!--                imageText:myTextContent="@string/ic_bottom_sheet" />-->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2" />
+            <!--时间选择器-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/time_picker_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_time_picker"
+                imageText:myTextContent="@string/ic_time_picker" />
+            <!--跑马灯2-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/auto_marquee_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_auto_marquee"
+                imageText:myTextContent="@string/ic_auto_marquee" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1" />-->
         </LinearLayout>
     </LinearLayout>
 

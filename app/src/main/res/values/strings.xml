@@ -66,4 +66,6 @@
     <string name="ic_bluetooth">蓝牙</string>
     <string name="ic_music_lrc">歌词同步</string>
     <string name="ic_movie_seat">电影选座</string>
+    <string name="ic_time_picker">时间选择器</string>
+    <string name="ic_auto_marquee">跑马灯</string>
 </resources>
