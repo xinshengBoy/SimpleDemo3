@@ -144,6 +144,9 @@
         <activity android:name=".activity.AutoMarqueeActivity"
             android:label="@string/ic_auto_marquee"
             android:screenOrientation="landscape"/>
+        <activity android:name=".activity.SudoActivity"
+            android:label="@string/ic_sudo"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

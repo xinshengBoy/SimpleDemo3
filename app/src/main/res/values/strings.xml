@@ -68,4 +68,5 @@
     <string name="ic_movie_seat">电影选座</string>
     <string name="ic_time_picker">时间选择器</string>
     <string name="ic_auto_marquee">跑马灯</string>
+    <string name="ic_sudo">数独</string>
 </resources>
