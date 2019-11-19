@@ -263,12 +263,12 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_sudo"
                 imageText:myTextContent="@string/ic_sudo" />
-<!--            &lt;!&ndash;电影选座&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/movie_seat_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_movie_seat"-->
-<!--                imageText:myTextContent="@string/ic_movie_seat" />-->
+            <!--录音-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/sound_record_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_sound_recording"
+                imageText:myTextContent="@string/ic_sound_recording" />
 <!--            &lt;!&ndash;时间选择器&ndash;&gt;-->
 <!--            <com.yks.simpledemo3.view.MenuItemView-->
 <!--                android:id="@+id/time_picker_layout"-->
@@ -284,7 +284,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3" />
+                android:layout_weight="2" />
         </LinearLayout>
     </LinearLayout>
 

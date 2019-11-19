@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/><!--写入文件-->
     <uses-permission android:name="android.permission.RECEIVE_SMS"/><!--接收短信-->
     <uses-permission android:name="android.permission.VIBRATE" /><!--震动-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/><!--录音-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/><!--不锁屏幕-->
     <!--GPS定位权限和获取粗略位置的权限-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -147,6 +149,7 @@
         <activity android:name=".activity.SudoActivity"
             android:label="@string/ic_sudo"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SoundRecordActivity" />
     </application>
 
 </manifest>
