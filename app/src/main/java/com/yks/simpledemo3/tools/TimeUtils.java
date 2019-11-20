@@ -240,6 +240,16 @@ public class TimeUtils {
     }
 
     /**
+     * 描述：将时间戳转换成日期
+     * @param milSecond 时间戳
+     * @return 日期
+     */
+    public static String getDateToString(long milSecond) {
+        Date date = new Date(milSecond);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",Locale.CHINA);
+        return format.format(date);
+    }
+    /**
      * 将时间字符串转为时间戳
      * <p>格式为yyyy-MM-dd HH:mm:ss</p>
      *
