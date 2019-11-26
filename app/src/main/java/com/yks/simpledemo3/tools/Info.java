@@ -14,6 +14,8 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 
 import com.yks.simpledemo3.adapter.BaseRecyclerAdapter;
 
@@ -125,6 +127,27 @@ public class Info {
         view.setAdapter(adapter);
     }
 
+    /**
+     * 描述：隐藏软键盘
+     * 作者：zzh
+     * @param v 要显示的输入框
+     */
+    public static void hideKeyboard(Context context, EditText v){
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (imm.isActive()){
+            imm.hideSoftInputFromWindow(v.getApplicationWindowToken(),0);
+        }
+    }
+
+    /**
+     * 描述：显示软键盘
+     * 作者：zzh
+     * @param v 要显示的输入框
+     */
+    public static void showKeyboard(Context context,EditText v){
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.showSoftInput(v,InputMethodManager.SHOW_FORCED);
+    }
     /**
      * 描述：获取软键盘弹起的高度
      * @param activity activity

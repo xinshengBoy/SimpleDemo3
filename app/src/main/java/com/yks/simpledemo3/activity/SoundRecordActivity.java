@@ -182,7 +182,6 @@ public class SoundRecordActivity extends Activity implements SensorEventListener
                 }
             }
         }
-
     }
     private void registerProximitSensorListener(){
         sensorManager = (SensorManager) mActivity.getSystemService(SENSOR_SERVICE);

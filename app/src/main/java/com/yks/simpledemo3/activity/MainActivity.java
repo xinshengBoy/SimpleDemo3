@@ -16,10 +16,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.yhao.floatwindow.FloatWindow;
+import com.yhao.floatwindow.PermissionListener;
+import com.yhao.floatwindow.Screen;
+import com.yhao.floatwindow.ViewStateListener;
 import com.yks.simpledemo3.R;
 import com.yks.simpledemo3.tools.GlideImageLoader;
 import com.yks.simpledemo3.tools.Info;
@@ -60,7 +65,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                         R.id.search_intime_layout,R.id.number_rain_layout,R.id.run_number_layout,R.id.bottom_sheet_layout,
                                         R.id.compass_clock_layout,R.id.custom_ruler_layout,R.id.city_location_layout,R.id.bluetooth_layout,
                                         R.id.music_lrc_layout,R.id.movie_seat_layout,R.id.time_picker_layout,R.id.auto_marquee_layout,
-                                        R.id.sudo_layout,R.id.sound_record_layout};
+                                        R.id.sudo_layout,R.id.sound_record_layout,R.id.chat_layout,R.id.create_form_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
                                                 MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
                                                 SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class,
@@ -69,7 +74,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                                 SearchInTimeActivity.class,NumberRainActivity.class,RunNumberActivity.class,BottomSheetActivity.class,
                                                 CompassClockActivity.class,CustomRulerActivity.class,CityLocationActivity.class,BluetoothActivity.class,
                                                 MusicLrcActivity.class,MovieSeatActivity.class,TimePickerActivity.class,AutoMarqueeActivity.class,
-                                                SudoActivity.class,SoundRecordActivity.class};
+                                                SudoActivity.class,SoundRecordActivity.class,ChatActivity.class,CreateFormActivity.class};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -168,6 +173,62 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         txt_appversion.setText(Info.getVersionName(mContext));
         btn_loginout = findViewById(R.id.btn_loginout);
         btn_loginout.setOnClickListener(this);
+
+        ImageView imageView = new ImageView(mContext);
+        imageView.setImageResource(R.mipmap.ai_top);
+        FloatWindow.with(getApplicationContext())
+                .setView(imageView)
+                .setWidth(70)
+                .setHeight(70)
+                .setX(Screen.width)
+                .setY(0)
+                .setDesktopShow(true)//桌面显示
+                .setViewStateListener(new ViewStateListener() {
+                    @Override
+                    public void onPositionUpdate(int i, int i1) {
+
+                    }
+
+                    @Override
+                    public void onShow() {
+
+                    }
+
+                    @Override
+                    public void onHide() {
+
+                    }
+
+                    @Override
+                    public void onDismiss() {
+
+                    }
+
+                    @Override
+                    public void onMoveAnimStart() {
+
+                    }
+
+                    @Override
+                    public void onMoveAnimEnd() {
+
+                    }
+
+                    @Override
+                    public void onBackToDesktop() {
+
+                    }
+                }).setPermissionListener(new PermissionListener() {
+            @Override
+            public void onSuccess() {
+
+            }
+
+            @Override
+            public void onFail() {
+
+            }
+        }).build();
     }
 
     @Override
@@ -286,6 +347,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        FloatWindow.destroy();
     }
 
     @Override

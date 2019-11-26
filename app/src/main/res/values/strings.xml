@@ -70,4 +70,6 @@
     <string name="ic_auto_marquee">跑马灯</string>
     <string name="ic_sudo">数独</string>
     <string name="ic_sound_recording">录音及动画</string>
+    <string name="ic_chat">聊天</string>
+    <string name="ic_form">生成表格</string>
 </resources>

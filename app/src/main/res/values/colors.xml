@@ -17,4 +17,6 @@
     <color name="colorDeepRed">#FFFA031C</color>
     <color name="colorDarkRed">#FFFF423B</color>
     <color name="colorOrange">#FFFFB000</color>
+    <color name="colorGreen">#FF179209</color>
+    <color name="colorGreen2">#FF98E165</color>
 </resources>

@@ -269,22 +269,22 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_sound_recording"
                 imageText:myTextContent="@string/ic_sound_recording" />
-<!--            &lt;!&ndash;时间选择器&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/time_picker_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_time_picker"-->
-<!--                imageText:myTextContent="@string/ic_time_picker" />-->
-<!--            &lt;!&ndash;跑马灯2&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/auto_marquee_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_auto_marquee"-->
-<!--                imageText:myTextContent="@string/ic_auto_marquee" />-->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2" />
+            <!--聊天-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/chat_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_chat"
+                imageText:myTextContent="@string/ic_chat" />
+            <!--生成表格-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/create_form_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_form"
+                imageText:myTextContent="@string/ic_form" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1" />-->
         </LinearLayout>
     </LinearLayout>
 

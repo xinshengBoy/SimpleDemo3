@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/layout_header"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cv_chat_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_below="@+id/headerLayout"
+        android:layout_marginBottom="50dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="3dp"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:id="@+id/et_chat_content"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="请输入"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorGray2"
+            android:layout_marginEnd="3dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/edit_bg"/>
+        <TextView
+            android:id="@+id/txt_chat_send"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="发送"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/chat2_bg"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"/>
+    </LinearLayout>
+</RelativeLayout>
