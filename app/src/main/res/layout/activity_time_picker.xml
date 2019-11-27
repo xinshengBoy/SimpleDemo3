@@ -6,18 +6,19 @@
     <include
         android:id="@+id/headerLayout"
         layout="@layout/layout_header"/>
-    <TextView
+    <Button
+        android:id="@+id/btn_selects"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="条件选择器"
-        android:textSize="18sp"
         android:textColor="@color/colorBlack2"
         android:gravity="center"/>
     <com.contrarywind.view.WheelView
         android:id="@+id/picker_wheelview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"/>
+        android:layout_margin="5dp"
+        android:visibility="gone"/>
     <Button
         android:id="@+id/btn_time_picker"
         android:layout_width="match_parent"
@@ -29,5 +30,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="省市联动"
+        android:textColor="@color/colorBlack2"/>
+    <Button
+        android:id="@+id/btn_bottom_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="底部弹框"
         android:textColor="@color/colorBlack2"/>
 </LinearLayout>

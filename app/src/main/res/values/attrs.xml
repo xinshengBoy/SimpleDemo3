@@ -94,4 +94,12 @@
         <attr name="overview_sold" format="color"/><!--已售区域颜色-->
         <attr name="txt_color" format="color"/>
     </declare-styleable>
+    <!--购物车选数量的控件-->
+    <declare-styleable name="AmountView">
+        <attr name="amountBtnWidth" format="dimension"/><!--左右两边按钮的长度-->
+        <attr name="amountBtnTextSize" format="dimension"/><!--左右两边按钮的字体大小-->
+        <attr name="amountTvWidth" format="dimension"/><!--中间编辑框的长度-->
+        <attr name="amountTvTextSize" format="dimension"/><!--中间编辑框的字体大小-->
+        <attr name="amountTvTextColor" format="color"/><!--中间编辑框文字的颜色-->
+    </declare-styleable>
 </resources>
