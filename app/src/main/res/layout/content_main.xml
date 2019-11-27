@@ -281,10 +281,39 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_form"
                 imageText:myTextContent="@string/ic_form" />
-<!--            <View-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_weight="1" />-->
+        </LinearLayout>
+        <TextView
+            style="@style/lableText"
+            android:text="@string/data" />
+        <LinearLayout style="@style/menuLayout">
+            <!--记录足迹-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/record_footline_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_record_line"
+                imageText:myTextContent="@string/ic_record_line" />
+<!--            &lt;!&ndash;电影选座&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/movie_seat_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_movie_seat"-->
+<!--                imageText:myTextContent="@string/ic_movie_seat" />-->
+<!--            &lt;!&ndash;时间选择器&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/time_picker_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_time_picker"-->
+<!--                imageText:myTextContent="@string/ic_time_picker" />-->
+<!--            &lt;!&ndash;跑马灯2&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/auto_marquee_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_auto_marquee"-->
+<!--                imageText:myTextContent="@string/ic_auto_marquee" />-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
         </LinearLayout>
     </LinearLayout>
 

@@ -65,7 +65,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                         R.id.search_intime_layout,R.id.number_rain_layout,R.id.run_number_layout,R.id.bottom_sheet_layout,
                                         R.id.compass_clock_layout,R.id.custom_ruler_layout,R.id.city_location_layout,R.id.bluetooth_layout,
                                         R.id.music_lrc_layout,R.id.movie_seat_layout,R.id.time_picker_layout,R.id.auto_marquee_layout,
-                                        R.id.sudo_layout,R.id.sound_record_layout,R.id.chat_layout,R.id.create_form_layout};
+                                        R.id.sudo_layout,R.id.sound_record_layout,R.id.chat_layout,R.id.create_form_layout,
+                                        R.id.record_footline_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
                                                 MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
                                                 SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class,
@@ -74,7 +75,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                                 SearchInTimeActivity.class,NumberRainActivity.class,RunNumberActivity.class,BottomSheetActivity.class,
                                                 CompassClockActivity.class,CustomRulerActivity.class,CityLocationActivity.class,BluetoothActivity.class,
                                                 MusicLrcActivity.class,MovieSeatActivity.class,TimePickerActivity.class,AutoMarqueeActivity.class,
-                                                SudoActivity.class,SoundRecordActivity.class,ChatActivity.class,CreateFormActivity.class};
+                                                SudoActivity.class,SoundRecordActivity.class,ChatActivity.class,CreateFormActivity.class,
+                                                RecordFootLineActivity.class};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -34,6 +34,7 @@
     <string name="custom">自定义</string>
     <string name="search">搜索</string>
     <string name="music">音乐</string>
+    <string name="data">数据</string>
 
     <!--首页-->
     <string name="channel_sort">频道排序</string>
@@ -72,4 +73,5 @@
     <string name="ic_sound_recording">录音及动画</string>
     <string name="ic_chat">聊天</string>
     <string name="ic_form">生成表格</string>
+    <string name="ic_record_line">行走轨迹</string>
 </resources>
