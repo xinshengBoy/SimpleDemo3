@@ -30,7 +30,10 @@
         android:roundIcon="@drawable/ic_appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+        <!--https://www.jianshu.com/p/798037d2b12c-->
         <activity android:name=".activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
@@ -160,6 +163,7 @@
             android:label="@string/ic_form"
             android:screenOrientation="portrait" />
         <activity android:name=".activity.RecordFootLineActivity" />
+        <activity android:name=".activity.WeatherReportActivity" />
     </application>
 
 </manifest>

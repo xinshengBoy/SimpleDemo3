@@ -17,6 +17,7 @@ import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.SimpleAdapter;
@@ -275,6 +276,15 @@ public class TimePickerActivity extends Activity implements View.OnClickListener
             popupWindow.dismiss();
             lightOffOrOn(true);
         }
+
+        ImageView iv_close = popupView.findViewById(R.id.iv_close);
+        iv_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
+                lightOffOrOn(true);
+            }
+        });
 
         popupWindow.showAtLocation(btn_bottom_dialog,Gravity.BOTTOM,0,0);
         popupView.startAnimation(animation);

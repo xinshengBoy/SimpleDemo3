@@ -6,8 +6,8 @@ android {
         applicationId "com.yks.simpledemo3"
         minSdkVersion 19
         targetSdkVersion 28
-        versionCode 2
-        versionName "1.0.2"
+        versionCode 3
+        versionName "1.0.3"
         resConfigs "zh-rCN","en"
     }
     buildTypes {
@@ -64,4 +64,6 @@ dependencies {
     api 'com.jiakaiyang:easyform-android:0.9.3'
     //悬浮窗
     api 'com.github.yhaolpz:FloatWindow:1.0.9'
+    //搜索框
+    api 'com.github.a237821375:LtEditSpinner:v1.1'
 }
