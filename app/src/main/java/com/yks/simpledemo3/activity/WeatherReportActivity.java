@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yks.simpledemo3.R;
@@ -65,7 +66,8 @@ public class WeatherReportActivity extends Activity {
     private List<CityCodeBean> cityList = new ArrayList<>();
     private List<WeatherReportBean> mList = new ArrayList<>();
     private WeatherReportAdapter adapter;
-    private String cityCode = "101060101";
+    private String cityCode = "101280601";
+    private int[] bgResource = new int[]{R.mipmap.banner1,R.mipmap.banner2,R.mipmap.banner3,R.mipmap.banner4,R.mipmap.banner5,R.mipmap.banner6,R.mipmap.banner7,R.mipmap.banner8,R.mipmap.banner9,R.mipmap.splash1,R.mipmap.splash2,R.mipmap.splash3,R.mipmap.banner1,R.mipmap.banner1,R.mipmap.banner1,R.mipmap.banner1,R.mipmap.banner1};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -159,6 +161,7 @@ public class WeatherReportActivity extends Activity {
 
         @Override
         protected void bindData(BaseViewHolder holder, int position, WeatherReportBean bean) {
+            RelativeLayout rl_weather = (RelativeLayout) holder.getView(R.id.rl_weather);
             TextView date = (TextView) holder.getView(R.id.txt_item_weather_date);
             TextView address = (TextView) holder.getView(R.id.txt_item_weather_address);
             TextView sunrise = (TextView) holder.getView(R.id.txt_item_weather_sunrise);
@@ -170,6 +173,7 @@ public class WeatherReportActivity extends Activity {
             TextView aqi = (TextView) holder.getView(R.id.txt_item_weather_aqi);
             TextView notice = (TextView) holder.getView(R.id.txt_item_weather_notice);
 
+            rl_weather.setBackground(getResources().getDrawable(bean.getBgResource()));
             date.setText("日期： "+bean.getDate()+"   "+bean.getWeek());
             address.setText("城市："+bean.getAddress());
             sunrise.setText("日出："+bean.getSunrise());
@@ -235,6 +239,7 @@ public class WeatherReportActivity extends Activity {
                                     bean.setAqi(object3.getString("aqi"));
                                     bean.setNotice(object3.getString("notice"));
                                     bean.setAddress(address);
+                                    bean.setBgResource(bgResource[0]);
                                     mList.add(bean);
                                     JSONArray array = object2.getJSONArray("forecast");
                                     for (int i=0;i<array.length();i++){
@@ -246,13 +251,14 @@ public class WeatherReportActivity extends Activity {
                                         bean1.setSunset(object4.getString("sunset"));
                                         String highs = getNumberForEx(object4.getString("high"));
                                         String lows = getNumberForEx(object4.getString("low"));
-                                        bean1.setTemprate(lows+" ~ "+highs);
+                                        bean1.setTemprate(lows+" ~ "+highs+"℃");
                                         bean1.setType(object4.getString("type"));
                                         bean1.setFengxiang(object4.getString("fx"));
                                         bean1.setFengli(object4.getString("fl"));
                                         bean1.setAqi(object4.has("aqi")  ? object4.getString("aqi") : "");
                                         bean1.setNotice(object4.getString("notice"));
                                         bean1.setAddress(address);
+                                        bean1.setBgResource(bgResource[i+1]);
                                         mList.add(bean1);
                                     }
                                     handler.sendEmptyMessage(GETWEATHERREPORTSUCCESS);
@@ -316,7 +322,11 @@ public class WeatherReportActivity extends Activity {
         String regEx = "[^0-9]";
         Pattern p = Pattern.compile(regEx);
         Matcher m = p.matcher(key);
-        return m.replaceAll("").trim();
+        if (key.contains("-")){
+            return "-"+m.replaceAll("").trim();
+        }else {
+            return m.replaceAll("").trim();
+        }
     }
 
     @Override

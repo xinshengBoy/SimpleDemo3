@@ -3,12 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlack2">
+    android:id="@+id/rl_weather"
+    android:background="@mipmap/banner1">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:background="#98000000">
         <TextView
             android:id="@+id/txt_item_weather_date"
             android:layout_width="wrap_content"

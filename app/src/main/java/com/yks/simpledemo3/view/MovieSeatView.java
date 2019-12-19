@@ -321,8 +321,14 @@ public class MovieSeatView extends View {
 
         seatBitmap = BitmapFactory.decodeResource(getResources(), seatAvailableResID);
 
-        float scaleX = defaultImgW / seatBitmap.getWidth();
-        float scaleY = defaultImgH / seatBitmap.getHeight();
+        float scaleX,scaleY;
+        if (seatBitmap == null) {
+            scaleX = 1.0f;
+            scaleY = 1.0f;
+        }else {
+            scaleX = defaultImgW / seatBitmap.getWidth();
+            scaleY = defaultImgH / seatBitmap.getHeight();
+        }
         xScale1 = scaleX;
         yScale1 = scaleY;
 
@@ -490,7 +496,7 @@ public class MovieSeatView extends View {
         float y = (headHeight - seatBitmap.getHeight()) / 2;
 
         float width = seatBitmap.getWidth() + spacing1 + txtWidth + spacing + seatSoldBitmap.getWidth() + txtWidth + spacing1 + spacing + checkedSeatBitmap.getHeight() + spacing1 + txtWidth;
-        Bitmap bitmap = Bitmap.createBitmap(getWidth(), (int) headHeight, Bitmap.Config.ARGB_8888);
+        Bitmap bitmap = Bitmap.createBitmap(getWidth(), (int) headHeight, Bitmap.Config.RGB_565);
 
         Canvas canvas = new Canvas(bitmap);
 

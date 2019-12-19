@@ -164,6 +164,7 @@
             android:screenOrientation="portrait" />
         <activity android:name=".activity.RecordFootLineActivity" />
         <activity android:name=".activity.WeatherReportActivity" />
+        <activity android:name=".activity.TimeDownActivity" />
     </application>
 
 </manifest>

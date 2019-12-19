@@ -75,4 +75,5 @@
     <string name="ic_form">生成表格</string>
     <string name="ic_record_line">行走轨迹</string>
     <string name="ic_wether_report">天气预报</string>
+    <string name="ic_time_down">倒计时</string>
 </resources>

@@ -192,7 +192,7 @@ public class WaterPictureActivity extends Activity implements View.OnClickListen
      * @return 透明背景的水印
      */
     private Bitmap createWaterBitmap(String text){
-        Bitmap bitmap = Bitmap.createBitmap(180,150, Bitmap.Config.ARGB_8888);
+        Bitmap bitmap = Bitmap.createBitmap(180,150, Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(bitmap);
         canvas.drawColor(Color.TRANSPARENT);//设置背景颜色为透明
 
@@ -274,7 +274,7 @@ public class WaterPictureActivity extends Activity implements View.OnClickListen
         w2 = watermark.getWidth();
         h2 = watermark.getHeight();
 
-        Bitmap result = Bitmap.createBitmap(src.getWidth(),src.getHeight(), Bitmap.Config.ARGB_8888);
+        Bitmap result = Bitmap.createBitmap(src.getWidth(),src.getHeight(), Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(result);
         //在canvas上绘制原图和新的水印图
         canvas.drawBitmap(src,0,0,null);

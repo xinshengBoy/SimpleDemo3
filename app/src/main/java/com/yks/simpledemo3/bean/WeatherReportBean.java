@@ -17,6 +17,7 @@ public class WeatherReportBean {
     private String aqi;//空气质量
     private String notice;//提示信息
     private String address;//地区
+    private int bgResource;//背景
 
     public String getDate() {
         return date;
@@ -104,5 +105,13 @@ public class WeatherReportBean {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public int getBgResource() {
+        return bgResource;
+    }
+
+    public void setBgResource(int bgResource) {
+        this.bgResource = bgResource;
     }
 }

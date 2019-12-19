@@ -116,7 +116,7 @@ public class LrcView extends View {
             long end = bean.getEnd();
             int i = (int) ((currentMills - start) * 1.0f / (end - start) * lineWidth);
             if (i > 0){
-                Bitmap textBitmap = Bitmap.createBitmap(i,80, Bitmap.Config.ARGB_8888);
+                Bitmap textBitmap = Bitmap.createBitmap(i,80, Bitmap.Config.RGB_565);
                 Canvas textCanvas = new Canvas(textBitmap);
                 textCanvas.drawText(lineLrc,lineWidth / 2,80,lrcPaint);
                 canvas.drawBitmap(textBitmap,leftoffset,height / 2 + 80 * (currentPosition - 1),null);
