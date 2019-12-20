@@ -102,4 +102,12 @@
         <attr name="amountTvTextSize" format="dimension"/><!--中间编辑框的字体大小-->
         <attr name="amountTvTextColor" format="color"/><!--中间编辑框文字的颜色-->
     </declare-styleable>
+    <!--横向滑动选择的控件-->
+    <declare-styleable name="HorizontalSelectedView">
+        <attr name="seeSize" format="integer"/><!--可见数目-->
+        <attr name="selectedTextSize" format="float"/><!--已选文字大小-->
+        <attr name="selectedTextColor" format="color"/><!--已选文字颜色-->
+        <attr name="noSelectedTextSize" format="float"/><!--未选中的文字大小-->
+        <attr name="noSelectedTextColor" format="color"/><!--未选中的文字颜色-->
+    </declare-styleable>
 </resources>

@@ -165,6 +165,7 @@
         <activity android:name=".activity.RecordFootLineActivity" />
         <activity android:name=".activity.WeatherReportActivity" />
         <activity android:name=".activity.TimeDownActivity" />
+        <activity android:name=".activity.ScrollSelectActivity" />
     </application>
 
 </manifest>

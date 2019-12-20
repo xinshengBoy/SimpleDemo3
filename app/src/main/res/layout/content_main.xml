@@ -304,17 +304,17 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_time_down"
                 imageText:myTextContent="@string/ic_time_down" />
-<!--            &lt;!&ndash;跑马灯2&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/auto_marquee_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_auto_marquee"-->
-<!--                imageText:myTextContent="@string/ic_auto_marquee" />-->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+            <!--跑马灯2-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/scroll_select_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_scroll_select"
+                imageText:myTextContent="@string/ic_scroll_select" />
         </LinearLayout>
+        <!--            <View-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:layout_weight="1" />-->
     </LinearLayout>
 
 </ScrollView>

@@ -76,4 +76,5 @@
     <string name="ic_record_line">行走轨迹</string>
     <string name="ic_wether_report">天气预报</string>
     <string name="ic_time_down">倒计时</string>
+    <string name="ic_scroll_select">滑动选择</string>
 </resources>
