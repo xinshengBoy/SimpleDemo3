@@ -77,4 +77,5 @@
     <string name="ic_wether_report">天气预报</string>
     <string name="ic_time_down">倒计时</string>
     <string name="ic_scroll_select">滑动选择</string>
+    <string name="ic_suitlines">曲线图</string>
 </resources>

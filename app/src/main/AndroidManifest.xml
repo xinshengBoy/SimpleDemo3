@@ -162,10 +162,21 @@
         <activity android:name=".activity.CreateFormActivity"
             android:label="@string/ic_form"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.RecordFootLineActivity" />
-        <activity android:name=".activity.WeatherReportActivity" />
-        <activity android:name=".activity.TimeDownActivity" />
-        <activity android:name=".activity.ScrollSelectActivity" />
+        <activity android:name=".activity.RecordFootLineActivity"
+            android:label="@string/ic_record_line"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.WeatherReportActivity"
+            android:label="@string/ic_wether_report"
+            android:screenOrientation="portrait"  />
+        <activity android:name=".activity.TimeDownActivity"
+            android:label="@string/ic_time_down"
+            android:screenOrientation="portrait"  />
+        <activity android:name=".activity.ScrollSelectActivity"
+            android:label="@string/ic_scroll_select"
+            android:screenOrientation="portrait"  />
+        <activity android:name=".activity.SuitLinesActivity"
+            android:label="@string/ic_suitlines"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
