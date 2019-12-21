@@ -24,7 +24,26 @@
                 line:lineType="curve"
                 line:lineStyle="solid"
                 line:needEdgeEffect="true"/>
-
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="定时打开第三方应用"
+                android:textSize="18sp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/btn_login_bg"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:onClick="timingOpenThirdApp"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="打开PDF"
+                android:textSize="18sp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/btn_login_bg"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:onClick="openPDF"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
