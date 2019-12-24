@@ -50,10 +50,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activity.ChannelSortActivity"
-            android:label="@string/channel_sort"
+            android:label="@string/ic_channel_sort"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.DrawableActivity"
-            android:label="@string/drawable_layout"
+            android:label="@string/ic_drawable"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.AppBayLayoutActivity"
             android:label="@string/ai_top"
@@ -176,6 +176,9 @@
             android:screenOrientation="portrait"  />
         <activity android:name=".activity.SuitLinesActivity"
             android:label="@string/ic_suitlines"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.ZoomImageActivity"
+            android:label="@string/ic_zoom_image"
             android:screenOrientation="portrait" />
 
         <service android:name=".adapter.OpenAppService" />

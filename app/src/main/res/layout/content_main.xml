@@ -32,14 +32,14 @@
             <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/channel_sort_layout"
                 style="@style/menuItemStyle"
-                imageText:myImageResource="@mipmap/channel_sort"
-                imageText:myTextContent="@string/channel_sort" />
+                imageText:myImageResource="@drawable/ic_channel_sort"
+                imageText:myTextContent="@string/ic_channel_sort" />
             <!--drawable的应用-->
             <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/drawable_layout"
                 style="@style/menuItemStyle"
-                imageText:myImageResource="@mipmap/drawable_layout"
-                imageText:myTextContent="@string/drawable_layout" />
+                imageText:myImageResource="@drawable/ic_drawable"
+                imageText:myTextContent="@string/ic_drawable" />
             <!--AppBarLayout悬浮吸顶-->
             <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/appBarLayout_layout"
@@ -318,12 +318,12 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_suitlines"
                 imageText:myTextContent="@string/ic_suitlines" />
-<!--            &lt;!&ndash;天气预报&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/wether_report_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_vertrial_scroll"-->
-<!--                imageText:myTextContent="@string/ic_wether_report" />-->
+            <!--放大镜-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/zoom_image_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_zoom_image"
+                imageText:myTextContent="@string/ic_zoom_image" />
 <!--            &lt;!&ndash;倒计时&ndash;&gt;-->
 <!--            <com.yks.simpledemo3.view.MenuItemView-->
 <!--                android:id="@+id/time_down_layout"-->
@@ -339,7 +339,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3" />
+                android:layout_weight="2" />
         </LinearLayout>
     </LinearLayout>
 

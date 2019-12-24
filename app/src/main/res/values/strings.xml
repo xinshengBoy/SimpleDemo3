@@ -37,8 +37,8 @@
     <string name="data">数据</string>
 
     <!--首页-->
-    <string name="channel_sort">频道排序</string>
-    <string name="drawable_layout">Drawable</string>
+    <string name="ic_channel_sort">频道排序</string>
+    <string name="ic_drawable">Drawable</string>
     <string name="ai_top">悬浮吸顶</string>
     <string name="safe_keyboard">安全键盘</string>
     <string name="message_verification">短信验证</string>
@@ -78,4 +78,5 @@
     <string name="ic_time_down">倒计时</string>
     <string name="ic_scroll_select">滑动选择</string>
     <string name="ic_suitlines">曲线图</string>
+    <string name="ic_zoom_image">放大镜</string>
 </resources>
