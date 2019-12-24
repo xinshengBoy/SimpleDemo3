@@ -7,6 +7,7 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -51,6 +52,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private RelativeLayout cache_layout;
 
     private List<Integer> images = new ArrayList<>();
+    Handler handler = new Handler();
     private long exitTime = 0;//退出时间
     //跳转集合
     private final int [] ids = new int[]{R.id.channel_sort_layout,R.id.drawable_layout,R.id.appBarLayout_layout,R.id.safeKeyBoard_layout,
@@ -134,6 +136,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 playClickTip(position+1);
             }
         });
+
         //todo 处理每个功能的点击事件
         for (int i=0;i<ids.length;i++){
             final MenuItemView layout = findViewById(ids[i]);

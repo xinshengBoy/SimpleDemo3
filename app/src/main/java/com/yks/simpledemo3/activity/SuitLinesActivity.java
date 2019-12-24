@@ -9,6 +9,7 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.v4.content.FileProvider;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -18,6 +19,7 @@ import com.yks.simpledemo3.adapter.OpenAppService;
 import com.yks.simpledemo3.bean.SuitUnit;
 import com.yks.simpledemo3.tools.Info;
 import com.yks.simpledemo3.view.MyActionBar;
+import com.yks.simpledemo3.view.SplashView;
 import com.yks.simpledemo3.view.SuitLines;
 
 import net.lemonsoft.lemonbubble.LemonBubble;
@@ -38,6 +40,8 @@ public class SuitLinesActivity extends Activity {
 
     private Context mContext = SuitLinesActivity.this;
     private Activity mActivity = SuitLinesActivity.this;
+    private SplashView splashView;
+    Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +53,23 @@ public class SuitLinesActivity extends Activity {
         initView();
     }
 
+    private void startLoadData(){
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                splashView.splashDisappear();
+            }
+        },3000);
+    }
+
     private void initView() {
         LinearLayout title_layout = findViewById(R.id.headerLayout);
         MyActionBar.show(mActivity, title_layout, "曲线图", "", false);
+
+        splashView = new SplashView(mContext);
+
+        title_layout.addView(splashView);
+        startLoadData();
 
         SuitLines view_suitlines1 = findViewById(R.id.view_suitlines1);
 

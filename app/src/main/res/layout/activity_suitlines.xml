@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:line="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:line="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <include
         android:id="@+id/headerLayout"
@@ -44,6 +44,15 @@
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:onClick="openPDF"/>
+            <com.yks.simpledemo3.view.LinearGradientTextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="氓之蚩蚩，匪来贸丝，来即我谋，送子涉淇，至于顿丘，匪我衍期"
+                android:textColor="@color/colorGray"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:background="@color/colorBlack2"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
