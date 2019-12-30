@@ -79,4 +79,5 @@
     <string name="ic_scroll_select">滑动选择</string>
     <string name="ic_suitlines">曲线图</string>
     <string name="ic_zoom_image">放大镜</string>
+    <string name="ic_gobang">五子棋</string>
 </resources>

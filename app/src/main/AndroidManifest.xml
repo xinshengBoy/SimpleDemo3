@@ -180,6 +180,7 @@
         <activity android:name=".activity.ZoomImageActivity"
             android:label="@string/ic_zoom_image"
             android:screenOrientation="portrait" />
+        <activity android:name=".activity.GobangActivity" />
 
         <service android:name=".adapter.OpenAppService" />
 
