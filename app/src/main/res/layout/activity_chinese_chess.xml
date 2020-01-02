@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/headerLayout"
+        layout="@layout/layout_header"/>
+    <com.yks.simpledemo3.view.chess.Chessboard
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C67B28"
+        android:layout_below="@+id/headerLayout"/>
+    <com.yks.simpledemo3.view.chess.PieceSeat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLayout"/>
+</RelativeLayout>

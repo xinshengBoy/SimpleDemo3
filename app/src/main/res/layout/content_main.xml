@@ -336,10 +336,39 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_tetris"
                 imageText:myTextContent="@string/ic_tetris" />
-<!--            <View-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_weight="1" />-->
+        </LinearLayout>
+        <TextView
+            style="@style/lableText"
+            android:text="@string/game" />
+        <LinearLayout style="@style/menuLayout">
+            <!--中国象棋-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/chinese_chess_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_chinese_chess"
+                imageText:myTextContent="@string/ic_chinese_chess" />
+<!--            &lt;!&ndash;天气预报&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/wether_report_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_vertrial_scroll"-->
+<!--                imageText:myTextContent="@string/ic_wether_report" />-->
+<!--            &lt;!&ndash;倒计时&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/time_down_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_time_down"-->
+<!--                imageText:myTextContent="@string/ic_time_down" />-->
+<!--            &lt;!&ndash;跑马灯2&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/scroll_select_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_scroll_select"-->
+<!--                imageText:myTextContent="@string/ic_scroll_select" />-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
         </LinearLayout>
     </LinearLayout>
 

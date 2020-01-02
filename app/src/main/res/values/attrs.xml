@@ -129,4 +129,8 @@
         <attr name="maxOfVisible" format="integer" />
         <attr name="countOfY" format="integer" />
     </declare-styleable>
+    <!--中国象棋-->
+    <declare-styleable name="PieceView">
+        <attr name="type" format="integer" />
+    </declare-styleable>
 </resources>

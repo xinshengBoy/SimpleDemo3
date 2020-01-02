@@ -180,8 +180,15 @@
         <activity android:name=".activity.ZoomImageActivity"
             android:label="@string/ic_zoom_image"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.GobangActivity" />
-        <activity android:name=".activity.TetrisActivity" />
+        <activity android:name=".activity.GobangActivity"
+            android:label="@string/ic_gobang"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.TetrisActivity"
+            android:label="@string/ic_tetris"
+            android:screenOrientation="portrait"  />
+        <activity android:name=".activity.ChineseChessActivity"
+            android:label="@string/ic_chinese_chess"
+            android:screenOrientation="portrait"  />
 
         <service android:name=".adapter.OpenAppService" />
 

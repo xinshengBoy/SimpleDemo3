@@ -35,6 +35,7 @@
     <string name="search">搜索</string>
     <string name="music">音乐</string>
     <string name="data">数据</string>
+    <string name="game">游戏</string>
 
     <!--首页-->
     <string name="ic_channel_sort">频道排序</string>
@@ -81,4 +82,8 @@
     <string name="ic_zoom_image">放大镜</string>
     <string name="ic_gobang">五子棋</string>
     <string name="ic_tetris">俄罗斯方块</string>
+    <string name="ic_chinese_chess">中国象棋</string>
+
+    <string name="chu_river">楚河</string>
+    <string name="chinese_border">汉界</string>
 </resources>
