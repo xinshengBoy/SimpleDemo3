@@ -330,16 +330,16 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_gobang"
                 imageText:myTextContent="@string/ic_gobang" />
-<!--            &lt;!&ndash;跑马灯2&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/scroll_select_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_scroll_select"-->
-<!--                imageText:myTextContent="@string/ic_scroll_select" />-->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+            <!--俄罗斯方块-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/tetris_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_tetris"
+                imageText:myTextContent="@string/ic_tetris" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1" />-->
         </LinearLayout>
     </LinearLayout>
 

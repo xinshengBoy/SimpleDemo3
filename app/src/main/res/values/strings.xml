@@ -80,4 +80,5 @@
     <string name="ic_suitlines">曲线图</string>
     <string name="ic_zoom_image">放大镜</string>
     <string name="ic_gobang">五子棋</string>
+    <string name="ic_tetris">俄罗斯方块</string>
 </resources>
