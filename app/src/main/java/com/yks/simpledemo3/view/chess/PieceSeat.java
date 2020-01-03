@@ -12,6 +12,7 @@ import java.util.List;
 /**
  * 描述：画所有棋子
  * Created by Jimmy on 2016/9/19 0019.
+ * https://github.com/xiaojianglaile/Chess
  */
 public class PieceSeat extends LinearLayout {
 
