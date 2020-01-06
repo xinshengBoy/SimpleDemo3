@@ -7,7 +7,11 @@
     <include
         android:id="@+id/headerLayout"
         layout="@layout/layout_header"/>
-    <com.yks.simpledemo3.view.GobangView
+<!--    <com.yks.simpledemo3.view.GobangView-->
+<!--        android:id="@+id/view_gobang"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+    <com.yks.simpledemo3.view.GoBangView2
         android:id="@+id/view_gobang"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

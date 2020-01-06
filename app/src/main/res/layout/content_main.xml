@@ -353,12 +353,12 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_puzzle_image"
                 imageText:myTextContent="@string/ic_puzzle_image" />
-<!--            &lt;!&ndash;倒计时&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/time_down_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_time_down"-->
-<!--                imageText:myTextContent="@string/ic_time_down" />-->
+            <!--连连看-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/repeate_read_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_repeate_read"
+                imageText:myTextContent="@string/ic_repeate_read" />
 <!--            &lt;!&ndash;跑马灯2&ndash;&gt;-->
 <!--            <com.yks.simpledemo3.view.MenuItemView-->
 <!--                android:id="@+id/scroll_select_layout"-->
@@ -368,7 +368,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2" />
+                android:layout_weight="1" />
         </LinearLayout>
     </LinearLayout>
 

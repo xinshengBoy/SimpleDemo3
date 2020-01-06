@@ -66,7 +66,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                         R.id.sudo_layout,R.id.sound_record_layout,R.id.chat_layout,R.id.create_form_layout,
                                         R.id.record_footline_layout,R.id.wether_report_layout,R.id.time_down_layout,R.id.scroll_select_layout,
                                         R.id.suitlines_layout,R.id.zoom_image_layout,R.id.gobang_layout,R.id.tetris_layout,
-                                        R.id.chinese_chess_layout,R.id.puzzle_image_layout};
+                                        R.id.chinese_chess_layout,R.id.puzzle_image_layout,R.id.repeate_read_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
                                                 MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
                                                 SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class,
@@ -78,7 +78,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                                 SudoActivity.class,SoundRecordActivity.class,ChatActivity.class,CreateFormActivity.class,
                                                 RecordFootLineActivity.class,WeatherReportActivity.class,TimeDownActivity.class,ScrollSelectActivity.class,
                                                 SuitLinesActivity.class,ZoomImageActivity.class,GobangActivity.class,TetrisActivity.class,
-                                                ChineseChessActivity.class,PuzzleImageActivity.class};
+                                                ChineseChessActivity.class,PuzzleImageActivity.class,RepeateReadActivity.class};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -191,13 +191,14 @@ public class GobangView extends View {
             int x = point.x;
             int y = point.y;
             //todo 水平方向检查
-            boolean isWin1 = checkResult(x,y,points,"horizontal");
-            boolean isWin2 = checkResult(x,y,points,"vertical");
-            boolean isWin3 = checkResult(x,y,points,"diagonalleft");
-            boolean isWin4 = checkResult(x,y,points,"diagonalright");
-            if (isWin1 || isWin2 || isWin3 || isWin4){
-                return true;
-            }
+            boolean isWin = checkResult(x,y,points,"horizontal");
+            if (isWin) return true;
+            isWin = checkResult(x,y,points,"vertical");
+            if (isWin) return true;
+            isWin = checkResult(x,y,points,"diagonalleft");
+            if (isWin) return true;
+            isWin = checkResult(x,y,points,"diagonalright");
+            if (isWin) return true;
         }
         return false;
     }

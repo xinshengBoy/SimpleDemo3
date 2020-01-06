@@ -16,13 +16,14 @@ public class PuzzleImageActivity extends Activity {
 
     private Context mContext = PuzzleImageActivity.this;
     private Activity mActivity = PuzzleImageActivity.this;
+    private PuzzleImageView view;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        PuzzleImageView view = new PuzzleImageView(mContext,mActivity);
+        view = new PuzzleImageView(mContext,mActivity);
         setContentView(view);
-
 //        setContentView(R.layout.activity_puzzle_image);
 //        initView();
     }

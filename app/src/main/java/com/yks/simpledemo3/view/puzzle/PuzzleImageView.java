@@ -45,6 +45,7 @@ public class PuzzleImageView extends View {
     private boolean isSuccess;
     private Board tilesBoard;
     private int offset = 3;//偏移量
+    private long downTime;
 
     public PuzzleImageView(Context context,Activity activity) {
         super(context);
@@ -71,7 +72,6 @@ public class PuzzleImageView extends View {
                 bitmapTiles[idx++] = Bitmap.createBitmap(back,k*tileWidth,i*tileHeight,tileWidth-offset,tileHeight-offset);
             }
         }
-        startGame();
     }
 
     @Override
@@ -100,6 +100,7 @@ public class PuzzleImageView extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN && !isSuccess){//按下
+            downTime = event.getDownTime();
             Point point = xyToIndex((int)event.getX(), (int) event.getY());
             for (int i=0;i<dir.length;i++){
                 int newX = point.getX() + dir[i][0];
@@ -128,6 +129,22 @@ public class PuzzleImageView extends View {
                         }
                     }
                 }
+            }
+        }else if (event.getAction() == MotionEvent.ACTION_UP){//抬起
+            long time = event.getEventTime();
+            if (time - downTime > 1500){
+                LemonHello.getInformationHello("提示","重新开始").addAction(new LemonHelloAction("取消", new LemonHelloActionDelegate() {
+                    @Override
+                    public void onClick(LemonHelloView lemonHelloView, LemonHelloInfo lemonHelloInfo, LemonHelloAction lemonHelloAction) {
+                        lemonHelloView.hide();
+                    }
+                })).addAction(new LemonHelloAction("确定", new LemonHelloActionDelegate() {
+                    @Override
+                    public void onClick(LemonHelloView lemonHelloView, LemonHelloInfo lemonHelloInfo, LemonHelloAction lemonHelloAction) {
+                        startGame();
+                        lemonHelloView.hide();
+                    }
+                })).show(context);
             }
         }
 

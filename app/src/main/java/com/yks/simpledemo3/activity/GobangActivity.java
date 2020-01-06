@@ -7,8 +7,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.yks.simpledemo3.R;
-import com.yks.simpledemo3.tools.Info;
-import com.yks.simpledemo3.view.GobangView;
+import com.yks.simpledemo3.view.GoBangView2;
 import com.yks.simpledemo3.view.MyActionBar;
 
 import net.lemonsoft.lemonbubble.LemonBubble;
@@ -28,7 +27,7 @@ public class GobangActivity extends Activity {
 
     private Context mContext = GobangActivity.this;
     private Activity mActivity = GobangActivity.this;
-    private GobangView view_gobang;
+    private GoBangView2 view_gobang;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,13 +41,13 @@ public class GobangActivity extends Activity {
         MyActionBar.show(mActivity, title_layout, "五子棋", "", false);
 
         view_gobang = findViewById(R.id.view_gobang);
-        view_gobang.setOnGameListener(new GobangView.onGameListener() {
-            @Override
-            public void onGameOver(int i) {
-                Info.showToast(mContext,i == 0 ? "白棋胜利" : "黑棋胜利",true);
-                Info.playRingtone(mContext,true);
-            }
-        });
+//        view_gobang.setOnGameListener(new GobangView.onGameListener() {
+//            @Override
+//            public void onGameOver(int i) {
+//                Info.showToast(mContext,i == 0 ? "白棋胜利" : "黑棋胜利",true);
+//                Info.playRingtone(mContext,true);
+//            }
+//        });
         LemonHello.getInformationHello("提示","黑棋先行").addAction(new LemonHelloAction("确定", new LemonHelloActionDelegate() {
             @Override
             public void onClick(LemonHelloView lemonHelloView, LemonHelloInfo lemonHelloInfo, LemonHelloAction lemonHelloAction) {

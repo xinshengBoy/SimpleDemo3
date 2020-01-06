@@ -190,6 +190,7 @@
             android:label="@string/ic_chinese_chess"
             android:screenOrientation="portrait"  />
         <activity android:name=".activity.PuzzleImageActivity" />
+        <activity android:name=".activity.RepeateReadActivity" />
 
         <service android:name=".adapter.OpenAppService" />
 
