@@ -16,7 +16,11 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -161,6 +165,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 }
             });
         }
+        //旋转动画
+        ImageView iv_header = findViewById(R.id.iv_header);
+        Animation animation = AnimationUtils.loadAnimation(mContext,R.anim.anim_sunshine);
+        LinearInterpolator lin = new LinearInterpolator();
+        animation.setInterpolator(lin);//todo 匀速旋转
+        iv_header.startAnimation(animation);
         //当前时间
         txt_current_time = findViewById(R.id.txt_current_time);
         txt_current_time.setText(getCurrentTime());

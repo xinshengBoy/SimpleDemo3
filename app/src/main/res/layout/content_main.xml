@@ -359,12 +359,12 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_repeate_read"
                 imageText:myTextContent="@string/ic_repeate_read" />
-<!--            &lt;!&ndash;跑马灯2&ndash;&gt;-->
+            <!--3D魔方-->
 <!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/scroll_select_layout"-->
+<!--                android:id="@+id/three_diraction_magic_layout"-->
 <!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_scroll_select"-->
-<!--                imageText:myTextContent="@string/ic_scroll_select" />-->
+<!--                imageText:myImageResource="@drawable/ic_magic"-->
+<!--                imageText:myTextContent="@string/ic_three_diraction_magic" />-->
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
