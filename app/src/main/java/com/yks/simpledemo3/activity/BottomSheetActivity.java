@@ -85,7 +85,7 @@ public class BottomSheetActivity extends Activity {
         BottomSheetBean bean1 = new BottomSheetBean(R.drawable.ic_appicon,R.string.app_name);
         BottomSheetBean bean2 = new BottomSheetBean(R.drawable.ic_bottom_sheet,R.string.ic_bottom_sheet);
         BottomSheetBean bean3 = new BottomSheetBean(R.drawable.ic_circle_menu,R.string.ic_circle_menu);
-        BottomSheetBean bean4 = new BottomSheetBean(R.drawable.ic_clock,R.string.ic_clock);
+        BottomSheetBean bean4 = new BottomSheetBean(R.drawable.ic_alarm_clock,R.string.ic_xiaomi_timer);
         BottomSheetBean bean5 = new BottomSheetBean(R.drawable.ic_csv_table,R.string.ic_csv_table);
         BottomSheetBean bean6 = new BottomSheetBean(R.drawable.ic_custom_clock,R.string.ic_custom_clock);
         BottomSheetBean bean7 = new BottomSheetBean(R.drawable.ic_marquee,R.string.ic_marquee);

@@ -25,7 +25,8 @@
 
         <TextView
             style="@style/lableText"
-            android:text="@string/sort" />
+            android:text="@string/sort"
+            android:layout_marginTop="0dp"/>
 
         <LinearLayout style="@style/menuLayout">
             <!--频道排序1-->
@@ -67,10 +68,10 @@
                 imageText:myTextContent="@string/message_verification" />
             <!--仿小米计时器-->
             <com.yks.simpledemo3.view.MenuItemView
-                android:id="@+id/xiaomi_stepclock_layout"
+                android:id="@+id/xiaomi_timer_layout"
                 style="@style/menuItemStyle"
-                imageText:myImageResource="@drawable/ic_clock"
-                imageText:myTextContent="@string/ic_clock" />
+                imageText:myImageResource="@drawable/ic_xiaomi_timers"
+                imageText:myTextContent="@string/ic_xiaomi_timer" />
             <!--dialog_fragment对话框-->
             <com.yks.simpledemo3.view.MenuItemView
                 android:id="@+id/dialog_fragment_layout"
@@ -359,16 +360,46 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_repeate_read"
                 imageText:myTextContent="@string/ic_repeate_read" />
-            <!--3D魔方-->
+            <!--闹钟-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/alarm_clock_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_alarm_clock"
+                imageText:myTextContent="@string/ic_alarm_clock" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1" />-->
+        </LinearLayout>
+        <LinearLayout style="@style/menuLayout">
+            <!--印章-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/create_seal_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_seal"
+                imageText:myTextContent="@string/ic_seal" />
+<!--            &lt;!&ndash;拼图游戏&ndash;&gt;-->
 <!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/three_diraction_magic_layout"-->
+<!--                android:id="@+id/puzzle_image_layout"-->
 <!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_magic"-->
-<!--                imageText:myTextContent="@string/ic_three_diraction_magic" />-->
+<!--                imageText:myImageResource="@drawable/ic_puzzle_image"-->
+<!--                imageText:myTextContent="@string/ic_puzzle_image" />-->
+<!--            &lt;!&ndash;连连看&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/repeate_read_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_repeate_read"-->
+<!--                imageText:myTextContent="@string/ic_repeate_read" />-->
+<!--            &lt;!&ndash;闹钟&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/alarm_clock_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_alarm_clock"-->
+<!--                imageText:myTextContent="@string/ic_alarm_clock" />-->
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" />
+                android:layout_weight="3" />
         </LinearLayout>
     </LinearLayout>
 

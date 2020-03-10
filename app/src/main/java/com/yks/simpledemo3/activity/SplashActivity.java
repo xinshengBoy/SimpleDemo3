@@ -1,6 +1,7 @@
 package com.yks.simpledemo3.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,7 +11,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.yks.simpledemo3.R;
+import com.yks.simpledemo3.tools.ACache;
 import com.yks.simpledemo3.tools.GlideImageLoader;
+import com.yks.simpledemo3.tools.Info;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 
@@ -24,19 +27,30 @@ import java.util.List;
  */
 public class SplashActivity extends Activity implements View.OnClickListener {
 
+    private Context mContext = SplashActivity.this;
     private List<Integer> images = new ArrayList<>();
-    private Button btn_splash_skip;
     private TextView txt_splash_finish;
+    private ACache acache;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        initView();
+        //TODO 缓存欢迎页是否已观看过
+        acache = ACache.get(mContext);
+        String saveVersion = acache.getAsString(Info.VERSION);
+        String currentVersion = Info.getVersionName(mContext);
+        if (saveVersion == null || saveVersion.equals("") || !saveVersion.equals(currentVersion)){//todo 假如历史版本与当前版本不一致时，要显示欢迎页
+            acache.put(Info.VERSION,currentVersion);
+            initView();
+        }else {
+            startActivity(new Intent(SplashActivity.this,LoginActivity.class));
+            finish();
+        }
     }
 
     private void initView() {
-        btn_splash_skip = findViewById(R.id.btn_splash_skip);
+        Button btn_splash_skip = findViewById(R.id.btn_splash_skip);
         Banner banner_splash = findViewById(R.id.banner_splash);
         txt_splash_finish = findViewById(R.id.txt_splash_finish);
 
@@ -78,5 +92,13 @@ public class SplashActivity extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         startActivity(new Intent(SplashActivity.this,LoginActivity.class));
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (acache != null){
+            acache = null;
+        }
     }
 }

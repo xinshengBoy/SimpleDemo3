@@ -43,7 +43,7 @@
     <string name="ai_top">悬浮吸顶</string>
     <string name="safe_keyboard">安全键盘</string>
     <string name="message_verification">短信验证</string>
-    <string name="ic_clock">小米计时器</string>
+    <string name="ic_xiaomi_timer">小米计时器</string>
     <string name="dialog_fragment">对话框</string>
     <string name="ic_windwill">风车</string>
     <string name="ic_super_button">超级按钮</string>
@@ -85,6 +85,8 @@
     <string name="ic_chinese_chess">中国象棋</string>
     <string name="ic_puzzle_image">拼图游戏</string>
     <string name="ic_repeate_read">连连看</string>
+    <string name="ic_alarm_clock">闹钟</string>
+    <string name="ic_seal">印章</string>
 
     <string name="chu_river">楚河</string>
     <string name="chinese_border">汉界</string>

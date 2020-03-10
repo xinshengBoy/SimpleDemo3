@@ -65,7 +65,7 @@
             android:label="@string/message_verification"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.XiaomiStepClockActivity"
-            android:label="@string/ic_clock"
+            android:label="@string/ic_xiaomi_timer"
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.DialogFragmentActivity"
             android:label="@string/dialog_fragment"
@@ -189,11 +189,23 @@
         <activity android:name=".activity.ChineseChessActivity"
             android:label="@string/ic_chinese_chess"
             android:screenOrientation="portrait"  />
-        <activity android:name=".activity.PuzzleImageActivity" />
-        <activity android:name=".activity.RepeateReadActivity" />
+        <activity android:name=".activity.PuzzleImageActivity"
+            android:label="@string/ic_puzzle_image"
+            android:screenOrientation="portrait"  />
+        <activity android:name=".activity.RepeateReadActivity"
+            android:label="@string/ic_repeate_read"
+            android:screenOrientation="portrait"   />
+        <activity android:name=".activity.AlarmClockActivity"
+            android:label="@string/ic_alarm_clock"
+            android:screenOrientation="portrait"  />
+        <activity android:name=".activity.AlarmSettingAgain" />
+        <activity android:name=".activity.CreateSealActivity"
+            android:label="@string/ic_seal"
+            android:screenOrientation="portrait"  />
 
         <service android:name=".adapter.OpenAppService" />
-
+        <!--闹钟接收器-->
+        <receiver android:name=".receiver.AlarmReceiver" android:process=":remote"/>
         <provider
             android:authorities="com.yks.simpledemo3.provider"
             android:name="android.support.v4.content.FileProvider"

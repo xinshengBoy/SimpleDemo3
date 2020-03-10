@@ -53,14 +53,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private DrawerLayout drawer;
     private TextView txt_current_time;
     private Button btn_loginout;
-    private RelativeLayout cache_layout;
 
     private List<Integer> images = new ArrayList<>();
     Handler handler = new Handler();
     private long exitTime = 0;//退出时间
     //跳转集合
     private final int [] ids = new int[]{R.id.channel_sort_layout,R.id.drawable_layout,R.id.appBarLayout_layout,R.id.safeKeyBoard_layout,
-                                        R.id.message_verification_layout,R.id.xiaomi_stepclock_layout,R.id.dialog_fragment_layout,R.id.windwill_layout,
+                                        R.id.message_verification_layout,R.id.xiaomi_timer_layout,R.id.dialog_fragment_layout,R.id.windwill_layout,
                                         R.id.super_button_layout,R.id.water_picture_layout,R.id.timing_tasks_layout,R.id.export_csv_layout,
                                         R.id.temperature_layout,R.id.circle_menu_layout,R.id.radar_layout,R.id.marquee_layout,
                                         R.id.custom_clock_layout,R.id.scroll_unlock_layout,R.id.xpop_layout,R.id.scroll_check_layout,
@@ -70,7 +69,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                         R.id.sudo_layout,R.id.sound_record_layout,R.id.chat_layout,R.id.create_form_layout,
                                         R.id.record_footline_layout,R.id.wether_report_layout,R.id.time_down_layout,R.id.scroll_select_layout,
                                         R.id.suitlines_layout,R.id.zoom_image_layout,R.id.gobang_layout,R.id.tetris_layout,
-                                        R.id.chinese_chess_layout,R.id.puzzle_image_layout,R.id.repeate_read_layout};
+                                        R.id.chinese_chess_layout,R.id.puzzle_image_layout,R.id.repeate_read_layout,R.id.alarm_clock_layout,
+                                        R.id.create_seal_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
                                                 MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
                                                 SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class,
@@ -82,7 +82,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                                 SudoActivity.class,SoundRecordActivity.class,ChatActivity.class,CreateFormActivity.class,
                                                 RecordFootLineActivity.class,WeatherReportActivity.class,TimeDownActivity.class,ScrollSelectActivity.class,
                                                 SuitLinesActivity.class,ZoomImageActivity.class,GobangActivity.class,TetrisActivity.class,
-                                                ChineseChessActivity.class,PuzzleImageActivity.class,RepeateReadActivity.class};
+                                                ChineseChessActivity.class,PuzzleImageActivity.class,RepeateReadActivity.class,AlarmClockActivity.class,
+                                                CreateSealActivity.class};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -181,7 +182,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         TextView txt_cache = findViewById(R.id.txt_cache);
         txt_cache.setText("2M");
         //清除缓存
-        cache_layout = findViewById(R.id.cache_layout);
+        RelativeLayout cache_layout = findViewById(R.id.cache_layout);
         cache_layout.setOnClickListener(this);
         //版本号
         TextView txt_appversion = findViewById(R.id.txt_appversion);

@@ -133,4 +133,10 @@
     <declare-styleable name="PieceView">
         <attr name="type" format="integer" />
     </declare-styleable>
+    <!--印章-->
+    <declare-styleable name="SealView">
+        <attr name="seal_textSize" format="float"/><!--文字大小-->
+        <attr name="seal_textColor" format="color"/><!--文字颜色-->
+        <attr name="seal_ringHeight" format="integer"/><!--圆圈宽度-->
+    </declare-styleable>
 </resources>

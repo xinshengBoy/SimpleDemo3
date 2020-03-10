@@ -33,6 +33,8 @@ public class Info {
     //获取屏幕高度，用于监听键盘弹起
     public static int KEY_HEIGHT = 0;
     public static String PDA_LOG = "MY_PDA_LOG";
+    //存储欢迎页是否要显示，按版本号来，如果当前版本号比记录的版本号大，则显示
+    public static String VERSION = "APP_VERSION";
     /**
      * 获取当前应用的版本名称
      * @param context 上下文
