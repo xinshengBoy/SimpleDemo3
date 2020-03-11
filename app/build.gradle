@@ -66,4 +66,7 @@ dependencies {
     api 'com.github.yhaolpz:FloatWindow:1.0.9'
     //搜索框
     api 'com.github.a237821375:LtEditSpinner:v1.1'
+    //汉字转拼音
+    api 'com.github.promeg:tinypinyin:2.0.3'
+    api 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
 }

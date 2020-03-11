@@ -202,6 +202,7 @@
         <activity android:name=".activity.CreateSealActivity"
             android:label="@string/ic_seal"
             android:screenOrientation="portrait"  />
+        <activity android:name=".activity.RecyclerItemOpenActivity" />
 
         <service android:name=".adapter.OpenAppService" />
         <!--闹钟接收器-->
