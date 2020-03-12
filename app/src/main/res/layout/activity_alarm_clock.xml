@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
     <include
         android:id="@+id/headerLayout"
@@ -31,4 +32,46 @@
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
         android:layout_margin="10dp"/>
+    <com.yks.simpledemo3.view.BadgeButton
+        android:id="@+id/view_badgeButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_login_bg"
+        android:drawableTop="@drawable/ic_alarm_clock"
+        android:gravity="center"
+        android:text="新消息"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:padding="5dp"
+        app:btnBadgeText="66"
+        app:btnBadgeColor="@color/colorDeepRed"
+        app:btnBadgeHeight="15dp"
+        app:btnBadgeVisible="true"/>
+    <com.yks.simpledemo3.view.BadgeButton
+        android:id="@+id/view_badgeButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_login_bg"
+        android:gravity="center"
+        android:text="群消息"
+        android:textSize="20sp"
+        android:textColor="@color/colorWhite"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        app:btnBadgeText="66"
+        app:btnBadgeColor="@color/colorDeepRed"
+        app:btnBadgeHeight="15dp"
+        app:btnBadgeVisible="true"/>
+    <com.yks.simpledemo3.view.BadgeButton
+        android:id="@+id/view_badgeButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="好消息"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        app:btnBadgeText="99+"
+        app:btnBadgeHeight="15dp"
+        app:btnBadgeVisible="true"/>
 </LinearLayout>

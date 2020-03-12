@@ -139,4 +139,11 @@
         <attr name="seal_textColor" format="color"/><!--文字颜色-->
         <attr name="seal_ringHeight" format="integer"/><!--圆圈宽度-->
     </declare-styleable>
+    <!--提示小红点-->
+    <declare-styleable name="BadgeButton">
+        <attr name="btnBadgeText" format="string"/><!--展示的文字-->
+        <attr name="btnBadgeColor" format="color"/><!--展示的颜色-->
+        <attr name="btnBadgeHeight" format="dimension"/><!--高度-->
+        <attr name="btnBadgeVisible" format="boolean"/><!--是否可见-->
+    </declare-styleable>
 </resources>

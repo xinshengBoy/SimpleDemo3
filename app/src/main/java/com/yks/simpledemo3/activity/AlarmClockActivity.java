@@ -17,6 +17,7 @@ import android.widget.TimePicker;
 import com.yks.simpledemo3.R;
 import com.yks.simpledemo3.receiver.AlarmReceiver;
 import com.yks.simpledemo3.tools.Info;
+import com.yks.simpledemo3.view.BadgeButton;
 import com.yks.simpledemo3.view.MyActionBar;
 
 import java.util.Calendar;
@@ -34,7 +35,9 @@ public class AlarmClockActivity extends Activity implements View.OnClickListener
     private Context mContext = AlarmClockActivity.this;
     private TextView txt_alarmclock_time;
     private Button btn_set_alarmclock,btn_cancel_alarmclock;
+    private BadgeButton view_badgeButton3;
     private Calendar calendar;
+    private boolean isVisible = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,9 +54,11 @@ public class AlarmClockActivity extends Activity implements View.OnClickListener
         txt_alarmclock_time = findViewById(R.id.txt_alarmclock_time);
         btn_set_alarmclock = findViewById(R.id.btn_set_alarmclock);
         btn_cancel_alarmclock = findViewById(R.id.btn_cancel_alarmclock);
+        view_badgeButton3 = findViewById(R.id.view_badgeButton3);
 
         btn_set_alarmclock.setOnClickListener(this);
         btn_cancel_alarmclock.setOnClickListener(this);
+        view_badgeButton3.setOnClickListener(this);
     }
 
     @Override
@@ -95,6 +100,14 @@ public class AlarmClockActivity extends Activity implements View.OnClickListener
             assert am != null;
             am.cancel(pi);
             Info.showToast(mContext,"取消成功",true);
+        }else if (v == view_badgeButton3){
+            if (isVisible){
+                view_badgeButton3.setBadgeVisible(false);
+                isVisible = false;
+            }else {
+                view_badgeButton3.setBadgeVisible(true);
+                isVisible = true;
+            }
         }
     }
 
