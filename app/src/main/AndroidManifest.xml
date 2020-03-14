@@ -202,8 +202,15 @@
         <activity android:name=".activity.CreateSealActivity"
             android:label="@string/ic_seal"
             android:screenOrientation="portrait"  />
-        <activity android:name=".activity.RecyclerItemOpenActivity" />
-        <activity android:name=".activity.BalanceLevelActivity" />
+        <activity android:name=".activity.RecyclerItemOpenActivity"
+            android:label="@string/ic_item_open"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.BalanceLevelActivity"
+            android:label="@string/ic_level"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.CopyColorActivity"
+            android:label="@string/ic_colors"
+            android:screenOrientation="portrait"  />
 
         <service android:name=".adapter.OpenAppService" />
         <!--闹钟接收器-->

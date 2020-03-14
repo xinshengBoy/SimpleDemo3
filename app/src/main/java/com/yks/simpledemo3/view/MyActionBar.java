@@ -24,6 +24,8 @@ public class MyActionBar {
     private static TextView txt_actionbar_right;
     @SuppressLint("StaticFieldLeak")
     private static ImageView iv_actionbar_back;
+    @SuppressLint("StaticFieldLeak")
+    protected static View view;
     /**
      * 描述：统一标题头
      * @param activity 所在的类
@@ -32,7 +34,7 @@ public class MyActionBar {
      * @return 返回当前视图
      */
     public static void show(final Activity activity, LinearLayout layout, String title, String right, boolean isShowRight){
-        View view = LayoutInflater.from(activity).inflate(R.layout.actionbar, null);
+        view = LayoutInflater.from(activity).inflate(R.layout.actionbar, null);
         iv_actionbar_back = view.findViewById(R.id.iv_actionbar_back);
         TextView txt_actionbar_title = view.findViewById(R.id.txt_actionbar_title);
         txt_actionbar_right = view.findViewById(R.id.txt_actionbar_right);
@@ -60,5 +62,14 @@ public class MyActionBar {
 
     public static void setOnRightClicklistener(View.OnClickListener onClicklistener){
         txt_actionbar_right.setOnClickListener(onClicklistener);
+    }
+
+    /**
+     * 描述：设置背景颜色
+     * 作者：zzh
+     * @param color 背景颜色
+     */
+    public static void setViewBackgroundColor(int color){
+        view.setBackgroundColor(color);
     }
 }

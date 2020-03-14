@@ -390,16 +390,16 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_level"
                 imageText:myTextContent="@string/ic_level" />
-<!--            &lt;!&ndash;闹钟&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/alarm_clock_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_alarm_clock"-->
-<!--                imageText:myTextContent="@string/ic_alarm_clock" />-->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+            <!--复制颜色-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/copy_color_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_colors"
+                imageText:myTextContent="@string/ic_colors" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1" />-->
         </LinearLayout>
     </LinearLayout>
 
