@@ -203,6 +203,7 @@
             android:label="@string/ic_seal"
             android:screenOrientation="portrait"  />
         <activity android:name=".activity.RecyclerItemOpenActivity" />
+        <activity android:name=".activity.BalanceLevelActivity" />
 
         <service android:name=".adapter.OpenAppService" />
         <!--闹钟接收器-->

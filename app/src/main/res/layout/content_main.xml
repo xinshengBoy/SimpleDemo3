@@ -384,12 +384,12 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_item_open"
                 imageText:myTextContent="@string/ic_item_open" />
-<!--            &lt;!&ndash;连连看&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/repeate_read_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_repeate_read"-->
-<!--                imageText:myTextContent="@string/ic_repeate_read" />-->
+            <!--水准仪-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/balance_level_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_level"
+                imageText:myTextContent="@string/ic_level" />
 <!--            &lt;!&ndash;闹钟&ndash;&gt;-->
 <!--            <com.yks.simpledemo3.view.MenuItemView-->
 <!--                android:id="@+id/alarm_clock_layout"-->
@@ -399,7 +399,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2" />
+                android:layout_weight="1" />
         </LinearLayout>
     </LinearLayout>
 
