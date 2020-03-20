@@ -2,6 +2,7 @@ package com.yks.simpledemo3.activity;
 
 import android.app.Application;
 
+import com.kongzue.dialog.util.DialogSettings;
 import com.yks.simpledemo3.tools.CrashHandler;
 import com.zhy.http.okhttp.OkHttpUtils;
 
@@ -32,6 +33,14 @@ public class MyApplication extends Application {
         //todo 初始化crash闪退日志监听
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(this);
+
+        //todo 空竹对话框初始化设置
+        DialogSettings.style = DialogSettings.STYLE.STYLE_IOS;//主题风格 STYLE_MATERIAL, STYLE_KONGZUE, STYLE_IOS
+        DialogSettings.theme = DialogSettings.THEME.LIGHT;//主题风格 LIGHT, DARK
+        DialogSettings.autoShowInputKeyboard = false;//不自动弹出输入法
+        DialogSettings.cancelable = true;//是否可点击外围空白处关闭
+        DialogSettings.cancelableTipDialog = true;
+        DialogSettings.init();
     }
 
     @Override

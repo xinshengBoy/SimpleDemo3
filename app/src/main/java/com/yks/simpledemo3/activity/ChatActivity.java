@@ -50,6 +50,7 @@ public class ChatActivity extends Activity {
         setContentView(R.layout.activity_chat);
 
         handler = new MyHandler(mActivity);
+
         initView();
         initData();
     }
@@ -142,7 +143,9 @@ public class ChatActivity extends Activity {
      * 作者：zzh
      */
     private void getReplay(){
-        ChatBean bean2 = new ChatBean("小璐","在的呢", TimeUtils.getCurTimeString(),false);
+        String[] replay = {"想你了","我饿了","你怎么不理我","哼","我不开心了","快过来，我告诉你个秘密","啥时候下班呢","你有点坏","哎，没意思","能不能不熬夜","我们去打球吧","逛街怎么样","行，都听你的"};
+        int index = (int) (Math.random()*replay.length);
+        ChatBean bean2 = new ChatBean("小璐", replay[index], TimeUtils.getCurTimeString(),false);
         mList.add(bean2);
         handler.sendEmptyMessageDelayed(SENDMESSAGESUCCESS,2000);
     }

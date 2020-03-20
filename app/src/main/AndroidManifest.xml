@@ -211,6 +211,9 @@
         <activity android:name=".activity.CopyColorActivity"
             android:label="@string/ic_colors"
             android:screenOrientation="portrait"  />
+        <activity android:name=".activity.KongzueDialogActivity"
+            android:label="@string/ic_kongzue"
+            android:screenOrientation="portrait" />
 
         <service android:name=".adapter.OpenAppService" />
         <!--闹钟接收器-->

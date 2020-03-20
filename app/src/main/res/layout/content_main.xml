@@ -366,10 +366,6 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_alarm_clock"
                 imageText:myTextContent="@string/ic_alarm_clock" />
-<!--            <View-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_weight="1" />-->
         </LinearLayout>
         <LinearLayout style="@style/menuLayout">
             <!--印章-->
@@ -396,10 +392,39 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_colors"
                 imageText:myTextContent="@string/ic_colors" />
-<!--            <View-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_weight="1" />-->
+        </LinearLayout>
+        <TextView
+            style="@style/lableText"
+            android:text="@string/dialog" />
+        <LinearLayout style="@style/menuLayout">
+            <!--空竹对话框-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/kongzue_dialog_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_kongzue"
+                imageText:myTextContent="@string/ic_kongzue" />
+<!--            &lt;!&ndash;拼图游戏&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/puzzle_image_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_puzzle_image"-->
+<!--                imageText:myTextContent="@string/ic_puzzle_image" />-->
+<!--            &lt;!&ndash;连连看&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/repeate_read_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_repeate_read"-->
+<!--                imageText:myTextContent="@string/ic_repeate_read" />-->
+<!--            &lt;!&ndash;闹钟&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/alarm_clock_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_alarm_clock"-->
+<!--                imageText:myTextContent="@string/ic_alarm_clock" />-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
         </LinearLayout>
     </LinearLayout>
 
