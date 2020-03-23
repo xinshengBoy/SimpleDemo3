@@ -403,13 +403,13 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_kongzue"
                 imageText:myTextContent="@string/ic_kongzue" />
-<!--            &lt;!&ndash;拼图游戏&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/puzzle_image_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_puzzle_image"-->
-<!--                imageText:myTextContent="@string/ic_puzzle_image" />-->
-<!--            &lt;!&ndash;连连看&ndash;&gt;-->
+            <!--二级联动-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/two_level_linkage_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_two_level_linkage"
+                imageText:myTextContent="@string/ic_two_level_linkage" />
+            <!--连连看-->
 <!--            <com.yks.simpledemo3.view.MenuItemView-->
 <!--                android:id="@+id/repeate_read_layout"-->
 <!--                style="@style/menuItemStyle"-->
@@ -424,7 +424,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3" />
+                android:layout_weight="2" />
         </LinearLayout>
     </LinearLayout>
 

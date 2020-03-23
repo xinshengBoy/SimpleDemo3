@@ -198,7 +198,9 @@
         <activity android:name=".activity.AlarmClockActivity"
             android:label="@string/ic_alarm_clock"
             android:screenOrientation="portrait"  />
-        <activity android:name=".activity.AlarmSettingAgain" />
+        <activity android:name=".activity.AlarmSettingAgain"
+            android:label="@string/ic_alarm_clock"
+            android:screenOrientation="portrait"  />
         <activity android:name=".activity.CreateSealActivity"
             android:label="@string/ic_seal"
             android:screenOrientation="portrait"  />
@@ -214,6 +216,9 @@
         <activity android:name=".activity.KongzueDialogActivity"
             android:label="@string/ic_kongzue"
             android:screenOrientation="portrait" />
+        <activity android:name=".activity.TwoLevelLinkageActivity" />
+        <activity android:name=".activity.InternationalSelectActivity" />
+        <activity android:name=".activity.DomesticSelectActivity" />
 
         <service android:name=".adapter.OpenAppService" />
         <!--闹钟接收器-->
