@@ -146,4 +146,17 @@
         <attr name="btnBadgeHeight" format="dimension"/><!--高度-->
         <attr name="btnBadgeVisible" format="boolean"/><!--是否可见-->
     </declare-styleable>
+    <!--数字测速仪-->
+    <declare-styleable name="DigitSpeedView">
+        <attr name="speedTextColor" format="color"/>
+        <attr name="unitTextColor" format="color" />
+        <attr name="speedBackgroundColor" format="color" />
+        <attr name="speedTextSize" format="dimension" />
+        <attr name="unitTextSize" format="dimension" />
+        <attr name="speedUnit" format="string" />
+        <attr name="speed" format="integer" />
+        <attr name="backgroundDrawable" format="integer" />
+        <attr name="disableBackgroundImage" format="boolean" />
+        <attr name="showUnit" format="boolean" />
+    </declare-styleable>
 </resources>

@@ -19,7 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 描述：
+ * 描述：多级联动地区选择效果
  * 作者：zzh
  * time:2020/03/20
  */

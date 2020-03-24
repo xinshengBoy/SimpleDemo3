@@ -216,9 +216,21 @@
         <activity android:name=".activity.KongzueDialogActivity"
             android:label="@string/ic_kongzue"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.TwoLevelLinkageActivity" />
-        <activity android:name=".activity.InternationalSelectActivity" />
-        <activity android:name=".activity.DomesticSelectActivity" />
+        <activity android:name=".activity.TwoLevelLinkageActivity"
+            android:label="@string/ic_two_level_linkage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.InternationalSelectActivity"
+            android:label="@string/ic_two_level_linkage"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.DomesticSelectActivity"
+            android:label="@string/ic_two_level_linkage"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SlideMenuActivity"
+            android:label="@string/ic_slide_menu"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.NumberSpeedActivity"
+            android:label="@string/ic_number_speed"
+            android:screenOrientation="portrait"/>
 
         <service android:name=".adapter.OpenAppService" />
         <!--闹钟接收器-->

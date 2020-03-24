@@ -30,6 +30,7 @@
     <color name="blue">#00C6FF</color>
     <color name="green">#00E099</color>
     <color name="pink">#FF3892</color>
+    <color name="light_grey_trasparent">#3fdddddd</color>
     <array name="splash_circle_colors">
         <item>@color/blue</item>
         <item>@color/green</item>
