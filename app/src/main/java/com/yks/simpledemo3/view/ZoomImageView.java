@@ -23,9 +23,8 @@ import com.yks.simpledemo3.R;
 public class ZoomImageView extends View {
 
     private int factor = 2;//放大的倍数
-    private int radius = 100;//放大镜的半径
+    private int radius = 120;//放大镜的半径
     private Bitmap mBitmap;//原图
-    private Bitmap mBigBitmap;//放大的图
     private ShapeDrawable shapeDrawable;//制作的圆形图片（局部，盖在canvas上面// ）
     private Matrix matrix;
     private int imageId = R.mipmap.splash2;
@@ -35,21 +34,12 @@ public class ZoomImageView extends View {
         init();
     }
 
-//    public ZoomImageView(Context context,AttributeSet attrs) {
-//        super(context, attrs);
-//        init();
-//    }
-//
-//    public ZoomImageView(Context context, AttributeSet attrs, int defStyleAttr) {
-//        super(context, attrs, defStyleAttr);
-//        init();
-//    }
-
     private void init(){
         mBitmap = BitmapFactory.decodeResource(getResources(),imageId);
-        mBigBitmap = mBitmap;
+        //放大的图
+        Bitmap mBigBitmap = mBitmap;
         //放大后的整个图片
-        mBigBitmap = Bitmap.createScaledBitmap(mBigBitmap,mBigBitmap.getWidth()*factor,mBigBitmap.getHeight()*factor,true);
+        mBigBitmap = Bitmap.createScaledBitmap(mBigBitmap, mBigBitmap.getWidth()*factor, mBigBitmap.getHeight()*factor,true);
         BitmapShader shader = new BitmapShader(mBigBitmap, Shader.TileMode.CLAMP,Shader.TileMode.CLAMP);
         //初始化圆形放大镜
         shapeDrawable = new ShapeDrawable(new OvalShape());
