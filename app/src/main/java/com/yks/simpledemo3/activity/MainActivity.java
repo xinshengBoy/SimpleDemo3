@@ -71,7 +71,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                         R.id.suitlines_layout,R.id.zoom_image_layout,R.id.gobang_layout,R.id.tetris_layout,
                                         R.id.chinese_chess_layout,R.id.puzzle_image_layout,R.id.repeate_read_layout,R.id.alarm_clock_layout,
                                         R.id.create_seal_layout,R.id.recycler_item_open_layout,R.id.balance_level_layout,R.id.copy_color_layout,
-                                        R.id.kongzue_dialog_layout,R.id.two_level_linkage_layout,R.id.slide_menu_layout,R.id.number_speed_layout};
+                                        R.id.kongzue_dialog_layout,R.id.two_level_linkage_layout,R.id.slide_menu_layout,R.id.number_speed_layout,
+                                        R.id.monitor_notification_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
                                                 MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
                                                 SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class,
@@ -85,7 +86,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                                 SuitLinesActivity.class,ZoomImageActivity.class,GobangActivity.class,TetrisActivity.class,
                                                 ChineseChessActivity.class,PuzzleImageActivity.class,RepeateReadActivity.class,AlarmClockActivity.class,
                                                 CreateSealActivity.class,RecyclerItemOpenActivity.class,BalanceLevelActivity.class,CopyColorActivity.class,
-                                                KongzueDialogActivity.class,TwoLevelLinkageActivity.class,SlideMenuActivity.class,NumberSpeedActivity.class};
+                                                KongzueDialogActivity.class,TwoLevelLinkageActivity.class,SlideMenuActivity.class,NumberSpeedActivity.class,
+                                                MonitorNotificationActivity.class};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

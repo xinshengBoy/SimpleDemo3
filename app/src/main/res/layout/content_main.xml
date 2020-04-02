@@ -421,10 +421,36 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_number_speed"
                 imageText:myTextContent="@string/ic_number_speed" />
-<!--            <View-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_weight="1" />-->
+        </LinearLayout>
+        <LinearLayout style="@style/menuLayout">
+            <!--消息监控-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/monitor_notification_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_monitor_notification"
+                imageText:myTextContent="@string/ic_monitor_notification" />
+<!--            &lt;!&ndash;二级联动&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/two_level_linkage_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_two_level_linkage"-->
+<!--                imageText:myTextContent="@string/ic_two_level_linkage" />-->
+<!--            &lt;!&ndash;侧边菜单&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/slide_menu_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_slide_menu"-->
+<!--                imageText:myTextContent="@string/ic_slide_menu" />-->
+<!--            &lt;!&ndash;数字测速仪&ndash;&gt;-->
+<!--            <com.yks.simpledemo3.view.MenuItemView-->
+<!--                android:id="@+id/number_speed_layout"-->
+<!--                style="@style/menuItemStyle"-->
+<!--                imageText:myImageResource="@drawable/ic_number_speed"-->
+<!--                imageText:myTextContent="@string/ic_number_speed" />-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
         </LinearLayout>
     </LinearLayout>
 

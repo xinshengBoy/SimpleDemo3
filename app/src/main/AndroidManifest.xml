@@ -231,8 +231,18 @@
         <activity android:name=".activity.NumberSpeedActivity"
             android:label="@string/ic_number_speed"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.MonitorNotificationActivity"
+            android:label="@string/ic_monitor_notification"
+            android:screenOrientation="portrait"/>
 
         <service android:name=".adapter.OpenAppService" />
+        <!--读取手机通知-->
+        <service android:name=".service.NotificationCollectorService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
         <!--闹钟接收器-->
         <receiver android:name=".receiver.AlarmReceiver" android:process=":remote"/>
         <provider

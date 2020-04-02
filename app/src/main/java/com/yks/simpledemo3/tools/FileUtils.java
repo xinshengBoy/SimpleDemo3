@@ -11,11 +11,17 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.yks.simpledemo3.bean.NotificationBean;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 /**
  * 描述：文件相关类工具
@@ -284,5 +290,74 @@ public class FileUtils {
         bp = Bitmap.createBitmap(bitmap,0,statusBarHeight,width,height-statusBarHeight);
         view.destroyDrawingCache();
         return bp;
+    }
+
+    public static File getFile(String filePath){
+        File file = new File(filePath);
+        if (!file.exists()){
+            try {
+                if (file.isDirectory() && !file.exists()){
+                    file.mkdirs();//创建文件夹
+                }
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return file;
+    }
+
+    /**
+     * 描述：保存list数据到sd卡
+     * @param list 数据
+     * @param fileName 文件名
+     */
+    public static void saveStorage2SDCard(ArrayList list,String fileName){
+        FileOutputStream fileOutputStream = null;
+        ObjectOutputStream objectOutputStream = null;
+        try {
+            File file = getFile(Environment.getExternalStorageDirectory()+"/yks/"+fileName);
+            fileOutputStream = new FileOutputStream(file.toString());
+            objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(list);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        if (objectOutputStream != null){
+            try {
+                objectOutputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        if (fileOutputStream != null){
+            try {
+                fileOutputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * 描述：获取sd卡文件的list集合
+     * @param fileName 文件名称
+     * @return 返回的list数据
+     */
+    public static ArrayList<NotificationBean> getNotificationList(String fileName){
+        ObjectInputStream objectInputStream = null;
+        FileInputStream fileInputStream = null;
+        ArrayList<NotificationBean> list = new ArrayList<>();
+        try {
+            File file = getFile(Environment.getExternalStorageDirectory()+"/yks/"+fileName);
+            fileInputStream = new FileInputStream(file.toString());
+            objectInputStream = new ObjectInputStream(fileInputStream);
+            list = (ArrayList<NotificationBean>) objectInputStream.readObject();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
     }
 }
