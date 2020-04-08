@@ -6,6 +6,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
+import android.graphics.Point;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,6 +15,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
+import android.view.Display;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
@@ -35,6 +37,9 @@ public class Info {
     public static String PDA_LOG = "MY_PDA_LOG";
     //存储欢迎页是否要显示，按版本号来，如果当前版本号比记录的版本号大，则显示
     public static String VERSION = "APP_VERSION";
+    //获取屏幕宽高
+    public static int SCREEN_WIDTH = 0;
+    public static int SCREEN_HEIGHT = 0;
     /**
      * 获取当前应用的版本名称
      * @param context 上下文
@@ -136,6 +141,7 @@ public class Info {
      */
     public static void hideKeyboard(Context context, EditText v){
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        assert imm != null;
         if (imm.isActive()){
             imm.hideSoftInputFromWindow(v.getApplicationWindowToken(),0);
         }
@@ -148,7 +154,21 @@ public class Info {
      */
     public static void showKeyboard(Context context,EditText v){
         InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        assert imm != null;
         imm.showSoftInput(v,InputMethodManager.SHOW_FORCED);
+    }
+
+    /**
+     * 描述：获取屏幕宽高
+     * 作者：zzh
+     * @param activity activity
+     */
+    public static void getScreenSize(Activity activity){
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        Point point = new Point();
+        display.getSize(point);
+        Info.SCREEN_WIDTH = point.x;
+        Info.SCREEN_HEIGHT = point.y;
     }
     /**
      * 描述：获取软键盘弹起的高度
@@ -156,8 +176,10 @@ public class Info {
      */
     public static void getScreenHeight(Activity activity){
         //获取屏幕高度，用于监听软键盘的弹起
-        int screenHeight = activity.getWindowManager().getDefaultDisplay().getHeight();
-        KEY_HEIGHT = screenHeight / 3;
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        Point point = new Point();
+        display.getSize(point);
+        KEY_HEIGHT = point.y / 3;
     }
 
     /**

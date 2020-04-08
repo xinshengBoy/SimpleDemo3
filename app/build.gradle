@@ -75,4 +75,6 @@ dependencies {
     implementation 'com.kongzue.dialog_v3:dialog:3.1.8'
     //侧边栏滑出与菜单
     api 'com.github.mzule.fantasyslide:library:1.0.5'
+    //今日头条适配
+    implementation 'me.jessyan:autosize:1.2.1'
 }

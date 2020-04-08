@@ -1,5 +1,6 @@
 package com.yks.simpledemo3.activity;
 
+import android.app.Activity;
 import android.app.Application;
 
 import com.kongzue.dialog.util.DialogSettings;
@@ -10,6 +11,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+import me.jessyan.autosize.AutoSize;
+import me.jessyan.autosize.AutoSizeConfig;
+import me.jessyan.autosize.onAdaptListener;
+import me.jessyan.autosize.utils.ScreenUtils;
 import okhttp3.OkHttpClient;
 
 /**
@@ -41,6 +46,22 @@ public class MyApplication extends Application {
         DialogSettings.cancelable = true;//是否可点击外围空白处关闭
         DialogSettings.cancelableTipDialog = true;
         DialogSettings.init();
+
+        //TODO 今日头条终极适配方案初始化
+        AutoSize.initCompatMultiProcess(this);
+        AutoSizeConfig.getInstance()
+                .setOnAdaptListener(new onAdaptListener() {
+                    @Override
+                    public void onAdaptBefore(Object target, Activity activity) {
+                        AutoSizeConfig.getInstance().setScreenWidth(ScreenUtils.getScreenSize(activity)[0]);
+                        AutoSizeConfig.getInstance().setScreenHeight(ScreenUtils.getScreenSize(activity)[1]);
+                    }
+
+                    @Override
+                    public void onAdaptAfter(Object target, Activity activity) {
+
+                    }
+                });
     }
 
     @Override

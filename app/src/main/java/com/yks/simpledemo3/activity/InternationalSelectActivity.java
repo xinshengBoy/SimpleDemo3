@@ -5,8 +5,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.yks.simpledemo3.R;
@@ -18,14 +20,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import me.jessyan.autosize.internal.CustomAdapt;
+
 /**
  * 描述：多级联动地区选择效果
  * 作者：zzh
  * time:2020/03/20
  */
-public class InternationalSelectActivity extends Activity {
+public class InternationalSelectActivity extends Activity implements CustomAdapt {
 
     private Context mContext = InternationalSelectActivity.this;
+    private Activity mActivity = InternationalSelectActivity.this;
 
     private List<CitySelectBean> mList = new ArrayList<>();
     private List<CitySelectBean.Country> countryList = new ArrayList<>();
@@ -73,6 +78,19 @@ public class InternationalSelectActivity extends Activity {
         Info.setRecycviewAdapter(mContext,cv_country,countryAdapter);
     }
 
+    @Override
+    public boolean isBaseOnWidth() {
+        return true;
+    }
+
+    @Override
+    public float getSizeInDp() {
+        Info.getScreenSize(mActivity);
+        Log.d("screenSize","长度为："+Info.SCREEN_WIDTH);
+        Log.d("screenSize","高度为："+Info.SCREEN_HEIGHT);
+        return Info.SCREEN_HEIGHT;
+    }
+
     private class StateAdapter extends BaseRecyclerAdapter<CitySelectBean>{
 
         StateAdapter(List<CitySelectBean> mDatas) {
@@ -99,6 +117,7 @@ public class InternationalSelectActivity extends Activity {
 
         @Override
         protected void bindData(BaseViewHolder holder, int position, final CitySelectBean.Country citySelectBean) {
+            RelativeLayout rl_country = (RelativeLayout) holder.getView(R.id.rl_country);
             TextView txt_item_countryname = (TextView) holder.getView(R.id.txt_item_countryname);
             final ImageView iv_item_open = (ImageView) holder.getView(R.id.iv_item_open);
             final RecyclerView cv_city = (RecyclerView) holder.getView(R.id.cv_city);
@@ -117,7 +136,7 @@ public class InternationalSelectActivity extends Activity {
             iv_item_open.setImageResource(R.mipmap.ic_open);
 
             final boolean[] isOpen = {false};
-            iv_item_open.setOnClickListener(new View.OnClickListener() {
+            rl_country.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if (isOpen[0]){

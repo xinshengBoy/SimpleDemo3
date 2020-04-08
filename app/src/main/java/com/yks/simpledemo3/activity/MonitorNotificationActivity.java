@@ -109,13 +109,13 @@ public class MonitorNotificationActivity extends Activity {
                     Info.showToast(mContext,"获取数据失败或数据为空",false);
                     Info.playRingtone(mContext,false);
                 }else if (msg.what == GETNOTIFICATIONSUCCESS){//todo 获取通知列表数据成功
-                    String tips = "";
+                    StringBuilder tips = new StringBuilder();
                     for (int i=0;i<mList.size();i++){
                         NotificationBean bean = mList.get(i);
-                        tips += "标题：" + bean.getTitle() + "\n" +
-                                "内容：" + bean.getContent() + "\n" +
-                                "日期：" + bean.getShowTime() + "\n" +
-                                "应用：" + bean.getPackageName() + "\n";
+                        tips.append("标题：").append(bean.getTitle()).append("\n")
+                                .append("内容：").append(bean.getContent()).append("\n")
+                                .append("日期：").append(bean.getShowTime()).append("\n")
+                                .append("应用：").append(bean.getPackageName()).append("\n");
                     }
                     txt_notification_record.setText(tips);
                     Info.playRingtone(mContext,true);
@@ -149,10 +149,10 @@ public class MonitorNotificationActivity extends Activity {
             info = "初始化,";
         }
         //拼接
-        String txt = "";
+        StringBuilder txt = new StringBuilder();
         String[] slips = info.split(",");
-        for (int i=0;i<slips.length;i++){
-            txt += slips[i] + "," + "\n";
+        for (String slip : slips) {
+            txt.append(slip).append(",").append("\n");
         }
         Info.playRingtone(mContext,true);
         txt_input_record.setText(txt);
@@ -219,12 +219,12 @@ public class MonitorNotificationActivity extends Activity {
             return;
         }
         //拼接
-        String txt = "";
+        StringBuilder txt = new StringBuilder();
         String[] slips = info.split(",");
-        for (int i=0;i<slips.length;i++){
-            txt += slips[i] + "," + "\n";
+        for (String slip : slips) {
+            txt.append(slip).append(",").append("\n");
         }
-        txt += input + "," + "\n";
+        txt.append(input).append(",").append("\n");
         acache.put("monitor",txt);
         Info.playRingtone(mContext,true);
         txt_input_record.setText(txt);
@@ -249,6 +249,7 @@ public class MonitorNotificationActivity extends Activity {
             channel.setLightColor(Color.RED);//设置灯光颜色
             channel.enableVibration(true);//开启震动
             channel.setVibrationPattern(new long[]{0,1000,0,1000});
+            assert manager != null;
             manager.createNotificationChannel(channel);
 
             Notification builder = new Notification.Builder(mContext,id)
@@ -265,9 +266,7 @@ public class MonitorNotificationActivity extends Activity {
                     .setAutoCancel(true)
                     .setContentIntent(pendingIntent)
                     .build();
-            if (manager != null) {
                 manager.notify(123,builder);
-            }
         }else {
             Notification notification = new NotificationCompat.Builder(this,"chat")
                     .setContentTitle("收到一条消息")
@@ -277,6 +276,7 @@ public class MonitorNotificationActivity extends Activity {
                     .setAutoCancel(true)
                     .setContentIntent(pendingIntent)
                     .build();
+            assert manager != null;
             manager.notify(1,notification);
         }
     }
