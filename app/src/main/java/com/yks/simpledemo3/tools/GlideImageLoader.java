@@ -7,8 +7,8 @@ import com.bumptech.glide.Glide;
 import com.youth.banner.loader.ImageLoader;
 
 /**
- * 描述：
- * 作者：
+ * 描述：使用glide加载图片
+ * 作者：zzh
  * time:2019/07/09
  */
 public class GlideImageLoader extends ImageLoader {
