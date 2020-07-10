@@ -72,7 +72,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                         R.id.chinese_chess_layout,R.id.puzzle_image_layout,R.id.repeate_read_layout,R.id.alarm_clock_layout,
                                         R.id.create_seal_layout,R.id.recycler_item_open_layout,R.id.balance_level_layout,R.id.copy_color_layout,
                                         R.id.kongzue_dialog_layout,R.id.two_level_linkage_layout,R.id.slide_menu_layout,R.id.number_speed_layout,
-                                        R.id.monitor_notification_layout};
+                                        R.id.monitor_notification_layout,R.id.vertical_scroll_card_layout};
     private final Class [] classes = new Class[]{ChannelSortActivity.class,DrawableActivity.class,AppBayLayoutActivity.class,SafeKeyBoardActivity.class,
                                                 MessageVerificationActivity.class,XiaomiStepClockActivity.class,DialogFragmentActivity.class,WindWillActivity.class,
                                                 SuperButtonActivity.class,WaterPictureActivity.class,TimingTaskActivity.class,ExportCSVActivity.class,
@@ -87,7 +87,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                                                 ChineseChessActivity.class,PuzzleImageActivity.class,RepeateReadActivity.class,AlarmClockActivity.class,
                                                 CreateSealActivity.class,RecyclerItemOpenActivity.class,BalanceLevelActivity.class,CopyColorActivity.class,
                                                 KongzueDialogActivity.class,TwoLevelLinkageActivity.class,SlideMenuActivity.class,NumberSpeedActivity.class,
-                                                MonitorNotificationActivity.class};
+                                                MonitorNotificationActivity.class,VerticalScrollCardActivity.class};
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

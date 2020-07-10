@@ -234,6 +234,7 @@
         <activity android:name=".activity.MonitorNotificationActivity"
             android:label="@string/ic_monitor_notification"
             android:screenOrientation="portrait"/>
+        <activity android:name=".activity.VerticalScrollCardActivity" />
 
         <service android:name=".adapter.OpenAppService" />
         <!--读取手机通知-->

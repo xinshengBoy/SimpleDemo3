@@ -429,12 +429,12 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_monitor_notification"
                 imageText:myTextContent="@string/ic_monitor_notification" />
-<!--            &lt;!&ndash;二级联动&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/two_level_linkage_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_two_level_linkage"-->
-<!--                imageText:myTextContent="@string/ic_two_level_linkage" />-->
+            <!-- 垂直滑动卡片-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/vertical_scroll_card_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_two_level_linkage"
+                imageText:myTextContent="@string/ic_vertical_scroll_card" />
 <!--            &lt;!&ndash;侧边菜单&ndash;&gt;-->
 <!--            <com.yks.simpledemo3.view.MenuItemView-->
 <!--                android:id="@+id/slide_menu_layout"-->
@@ -450,7 +450,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="3" />
+                android:layout_weight="2" />
         </LinearLayout>
     </LinearLayout>
 
