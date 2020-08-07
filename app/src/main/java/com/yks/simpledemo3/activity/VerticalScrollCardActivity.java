@@ -3,6 +3,7 @@ package com.yks.simpledemo3.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import com.yks.simpledemo3.R;
 import com.yks.simpledemo3.adapter.BaseRecyclerAdapter;
 import com.yks.simpledemo3.bean.VerticalScrollCardBean;
+import com.yks.simpledemo3.tools.Info;
 import com.yks.simpledemo3.view.MyActionBar;
 
 import java.util.ArrayList;
@@ -65,6 +67,26 @@ public class VerticalScrollCardActivity extends Activity {
         }
         VerticalScrollCardAdapter adapter = new VerticalScrollCardAdapter(mList);
         rv_vertical_scroll_card.setAdapter(adapter);
+        rv_vertical_scroll_card.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                int currentPosition = ((RecyclerView.LayoutParams) recyclerView.getChildAt(0).getLayoutParams()).getViewAdapterPosition();
+                if ((currentPosition+1) >= mList.size()){
+                    Info.showToast(mContext,"已经是最后一个了",false);
+                }
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                int currentPosition = ((RecyclerView.LayoutParams) recyclerView.getChildAt(0).getLayoutParams()).getViewAdapterPosition();
+                if (dx > dy && currentPosition == 0){
+                    Info.showToast(mContext,"已经是第一个了",false);
+                }
+                System.out.println("技术："+currentPosition);
+            }
+        });
     }
 
     private class VerticalScrollCardAdapter extends BaseRecyclerAdapter<VerticalScrollCardBean>{

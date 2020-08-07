@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 
 import com.kongzue.dialog.util.DialogSettings;
+import com.raizlabs.android.dbflow.config.FlowManager;
 import com.yks.simpledemo3.tools.CrashHandler;
 import com.zhy.http.okhttp.OkHttpUtils;
 
@@ -62,6 +63,9 @@ public class MyApplication extends Application {
 
                     }
                 });
+
+        //todo DBFLO数据库的初始化（sqlite基础）
+        FlowManager.init(this);
     }
 
     @Override

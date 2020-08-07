@@ -29,6 +29,10 @@ import java.util.ArrayList;
  * time:2019/10/14
  */
 public class FileUtils {
+
+    private final static String DES = "DES";
+    private final static String ENCODE = "GBK";
+
     /**
      * 描述：判断SD卡是否可用
      * 作者：zzh

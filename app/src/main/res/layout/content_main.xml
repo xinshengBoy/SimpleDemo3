@@ -435,12 +435,12 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_two_level_linkage"
                 imageText:myTextContent="@string/ic_vertical_scroll_card" />
-<!--            &lt;!&ndash;侧边菜单&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/slide_menu_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_slide_menu"-->
-<!--                imageText:myTextContent="@string/ic_slide_menu" />-->
+            <!--考勤打卡-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/clock_out_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_clock_out"
+                imageText:myTextContent="@string/ic_clock_out" />
 <!--            &lt;!&ndash;数字测速仪&ndash;&gt;-->
 <!--            <com.yks.simpledemo3.view.MenuItemView-->
 <!--                android:id="@+id/number_speed_layout"-->
@@ -450,7 +450,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="2" />
+                android:layout_weight="1" />
         </LinearLayout>
     </LinearLayout>
 
