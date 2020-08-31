@@ -98,6 +98,7 @@
     <string name="ic_monitor_notification">通知监控</string>
     <string name="ic_vertical_scroll_card">垂直滑动卡片</string>
     <string name="ic_clock_out">考勤打卡</string>
+    <string name="ic_phone_monitor">手机监控</string>
 
     <string name="chu_river">楚河</string>
     <string name="chinese_border">汉界</string>

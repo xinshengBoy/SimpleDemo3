@@ -21,6 +21,11 @@
     <uses-feature android:name="android.hardware.location.gps"/>
     <uses-feature android:name="android.hardwarebluetooth_le"
         android:required="true"/>
+    <!--监控-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
 
     <application
         android:allowBackup="true"
@@ -236,6 +241,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".activity.VerticalScrollCardActivity" />
         <activity android:name=".activity.ClockOutActivity" />
+        <activity android:name=".activity.PhoneMonitorActivity" />
 
         <service android:name=".adapter.OpenAppService" />
         <!--读取手机通知-->

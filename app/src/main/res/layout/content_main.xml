@@ -441,16 +441,16 @@
                 style="@style/menuItemStyle"
                 imageText:myImageResource="@drawable/ic_clock_out"
                 imageText:myTextContent="@string/ic_clock_out" />
-<!--            &lt;!&ndash;数字测速仪&ndash;&gt;-->
-<!--            <com.yks.simpledemo3.view.MenuItemView-->
-<!--                android:id="@+id/number_speed_layout"-->
-<!--                style="@style/menuItemStyle"-->
-<!--                imageText:myImageResource="@drawable/ic_number_speed"-->
-<!--                imageText:myTextContent="@string/ic_number_speed" />-->
-            <View
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
+            <!--手机监控-->
+            <com.yks.simpledemo3.view.MenuItemView
+                android:id="@+id/phone_monitor_layout"
+                style="@style/menuItemStyle"
+                imageText:myImageResource="@drawable/ic_phone_monitor"
+                imageText:myTextContent="@string/ic_phone_monitor" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1" />-->
         </LinearLayout>
     </LinearLayout>
 
